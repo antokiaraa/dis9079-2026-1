@@ -1,4 +1,6 @@
 # sesion-02
 
 lunes 16 marzo 2026
-hola 
+
+
+grupo solemne 1: Martina Alegria-Antonella lavalle-Catalina Salinas
