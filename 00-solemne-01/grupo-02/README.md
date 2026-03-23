@@ -1,10 +1,10 @@
-# grupo-xx
+# friendshipisfriend-02 
 
 ## integrantes
 
-* nombre completo
-* nombre completo
-* nombre completo
+* Magdalena Balart
+* Jesus Miranda
+* Carla Nuñez 
 
 ## descripción del proyecto
 
