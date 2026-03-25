@@ -176,6 +176,8 @@ int main()
 }
 ```
 
+![tablaSiPerifixes](./imagenes/exploracion1.gif)
+ 
 Que la luz parpadee constantemente
 
 ```cpp
@@ -229,3 +231,5 @@ int main()
     }
 }
 ```
+
+![tablaSiPerifixes](./imagenes/exploracion2.gif)
