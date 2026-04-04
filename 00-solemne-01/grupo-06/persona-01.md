@@ -48,6 +48,8 @@ En general me llamó la atención que las descargas fueran tan rápidas, pensé 
 
 <img width="1000" height="1000" alt="pi-pico-2W" src="https://github.com/user-attachments/assets/c656b73e-61c7-4020-a148-aea33a9df131" />
 
+*Créditos Imagen: https://mcielectronics.cl/shop/product/74358/?srsltid=AfmBOorPc8vYPX7ZT3WFb0O20SOzW3Kpq1OABx9OQNK9RxAZsK4xQ8bk*
+
 El producto que elegí investigar es la Raspberry Pi Pico 2 W, una placa de desarrollo pequeña que funciona como microcontrolador. Esta permite crear proyectos electrónicos interactivos conectando sensores, luces y otros componentes.
 
 A diferencia de un computador, esta placa está diseñada para ejecutar tareas específicas de forma eficiente, lo que la hace ideal para proyectos de electrónica y prototipado.
@@ -69,7 +71,10 @@ Elegí este producto porque me llamó la atención desde que la vi en clases, es
 También me parece interesante que, a pesar de ser una placa pequeña, tiene muchas capacidades, como conectarse a WiFi y ejecutar código en Python como dijo Aarón en clases. Esto la hace fácil de usar pero a la vez muy potente para crear proyectos interactivos.
 
 <img width="1620" height="1080" alt="image" src="https://github.com/user-attachments/assets/7d808ed7-975e-4f84-914b-6d753789ed4d" />
-me gusta el logo de frambuesa, es muy cute <3
+
+*Créditos Imagen: https://assets.raspberrypi.com/static/f79040e1bd32ada87432d60365b2c902/6176f/RP2350.jpg*
+
+Me gusta el logo de frambuesa, es muy cute <3
 
 ## Relación con el proyecto
 
