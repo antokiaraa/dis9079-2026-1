@@ -10,6 +10,10 @@ Resulta que si era el cable, logramos correr el codigo y prender luces en el ard
 Otro aprendizaje, revisamos bien el contenido y en arduino los valores que habia que cambiar por las credenciales nuestras, lo hicimos mal, y estbamos usando la contraseña personal mas no la que te da el sitio, la aio key.
 Por otro lado intrusiando logramos conectar la raspberry pi a Adafruit
 
+LOGRAMOS CONECTARLO!!!!!
+encontramos un sitio de tutoriales en la pagina de adafruit, seguimos las indicaciones y aun no resultaba y aaron nos actualizo el arduino, que era el gran problema, luego de eso se conecto sin problema, probamos con el block "stream" en dashboard como decia en el ejemplo
+https://learn.adafruit.com/assets/34840
+
 ## sobre artista, diseñadora o producto que usa electrónica o computación inalámbricas
 ##Kunihiko Morinaga
 
