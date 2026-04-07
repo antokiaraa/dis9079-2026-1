@@ -5,6 +5,7 @@ lunes 06 abril 2026
 solemne 1
 
 hardware es físico y tangible se puede tocar como el cpu o el monitor
+
 software es intangible y lógico como programas o apps como microsoft o windows
 
 instalar adafruit io arduino 
