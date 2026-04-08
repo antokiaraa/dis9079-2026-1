@@ -15,9 +15,20 @@ encontramos un sitio de tutoriales en la pagina de adafruit, seguimos las indica
 https://learn.adafruit.com/assets/34840
 
 ## sobre artista, diseñadora o producto que usa electrónica o computación inalámbricas
-##Kunihiko Morinaga
-
 
 ![Lookphoto_79](https://github.com/user-attachments/assets/5dea1300-0d4e-480d-8db7-1fa023086be5)
 
-Lo ubique por su ultima coleccion "2026-27 A/W COLLECTION “GHOST”" en la que de fondo tenia una gran pantalla reproduciendo una escena de the ghost in the shell, y las prendas que iban pasando tenian ¨hilos blandos y textiles incrustados con  tecnologia LED_LCD" hechos en colab con MPLUSPLUS, ademas dice que pueden ser plegados y cosidos, lo cual llaman: camuflaje optico termico, puesto que las imagenes que se crean con el conjunto de mini luces led, va sincornizada con la pantalla de atras
+## Minoru Fujimoto
+Minoru Fujimoto es un artista, doctor en filosofia ,coreografo y doctor en computación vestible de la Universidad de Kobe. 
+Tras trabajar en el departamento de informatica del diseño en la Universidad de Arte de Musashino, fundo MPLUSPLUS (make ++), firma que integra Led en los textiles a traves de un sistema de control inalambrico, segun ellos mismos trabajan con la "sincronización inalámbrica de dispositivos a gran escala y la integración audiovisual precisa hasta la robótica avanzada".
+
+Los ubique por la reciente colaboracion en la que trabajaron con el diseñador japones Kunihiko Morinaga, fundador de la marca ANREALAGE, para crear la coleccion "2026-27 A/W “GHOST”" en la que de fondo tenia una gran pantalla reproduciendo escenas de the Ghost In The Shell, y al mismo tiempo iban pasando prendas programadas para estar coordinadas con la esenografia, para de este modo camuflarse en momentos especificos.
+La programación de las prenda tenian ¨hilos blandos y textiles incrustados 10.000 LED_LCD" con la capacidad de ser plegados y cosidos, en las que el equipo tras meses desarrollando el sistema de programacion, logro que estos LEDs fueran controlables individualmente mediante control remoto, con la capacidad de presentar "imagenes animadas", lo cual llamaron: camuflaje optico termico inspirado en el efecto ficticio de mismo nombre que aparece en el anime Ghost In The Shell.
+
+No es primera vez que Fujimoto (MPLUSPLUS) colabora con Morinaga y con la empresa LED Tokyo, que alquila pantallas LED de gran escala, tambien realizaron coleccion 2025-26 A/W “ SCREEN ” y una colaboracion con Beyonce, donde ocupo uno de sus vestidos en su gira Cowboy Carter Tour, en donde Fujimoto tambien desarrollo textiles LED capaces de mostrar imagenes controladas a distancia.
+Si bien la tecnología LED portátil ya había sido abordada por algunas marcas de  moda experimental, MPLUSPLUS incorporó sus pantallas en diversos escenarios muy distintos, desde desfiles hasta festivales y conciertos (2022 Stray Kids, MAMA awards) generando toda una fantasia entre el dialogo del arte y la tecnologia.
+
+<img width="1280" height="720" alt="image_1" src="https://github.com/user-attachments/assets/21979053-141c-4602-b4b0-f6b3ec7f28e3" />
+
+![螢幕快照-2025-04-30-下午5 34 32](https://github.com/user-attachments/assets/65851c14-ef1f-49ce-9410-3c5c702fea41)
+
