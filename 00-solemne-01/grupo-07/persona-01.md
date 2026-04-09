@@ -4,7 +4,7 @@ investigaciones individuales
 
 ## sobre adafruit io
 
-Adafruit IO de Adafruit, empresa creada por Ladyada, Limor Fried, Adafruit IO es un servicio de nube que te permite trabajar con o sin codigo
+Adafruit IO de Adafruit, empresa creada por Ladyada, Limor Fried, Adafruit IO es un servicio de nube que te permite trabajar con o sin codigo  
 Este servicio no te limita soloa trabajar con el hardware de su marca sino tambien te permite trabajar con casi cualquier dispositivo que pueda enviar info hacia el internet
 La nube de Adafuit IO es muy amable y puedes acceder a ella de cualquier servidor, puedes conectarla a otros servicios como:
 
@@ -16,6 +16,8 @@ La nube de Adafuit IO es muy amable y puedes acceder a ella de cualquier servido
 
 - etc
 
-![Servicios para complementar Adafruit](/images/adafruit.png) 
+  
+
+![Servicios para complementar Adafruit](/00-solemne-01/grupo-07/imagenes/serviciosadafruit.png)
 
 ## sobre artista, diseñadora o producto que usa electrónica o computación inalámbricas
