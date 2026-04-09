@@ -11,46 +11,21 @@ investigaciones individuales
 
 ## sobre artista, diseñadora o producto que usa electrónica o computación inalámbricas
 
-Yuri Suzuki
+Rafael Lozano Hemmer 
 
-Artista sonoro, diseñador y compositor de música electronica. 
+Artista mexicano-canadiense, nacido en Ciudad de Mexico en 1967, Licenciado en Química Física por la universidad Concordia de Montreal, Canadá. Reconocido por sus instalaciones interactivas a gran escala, combinan el arte, ciencia y tecnología. 
 
-Suzuki nace en tokio en 1980 y entre 1999 y 2005 trabaja para el grupo artistico Japonés Maywa Denki donde desarrolla su interés musical y tecnologico. En el 2005 comienza sus estudios en Londres, en el Royal COllege of Art, durante este periodo trabaja en proyectos para Yamaha y Moritz waldemeyer luego de su graduación abre su propio estudio en Londres. 
+## Obra
 
-Su trabajo gira entorno a la relacion del sonido y la forma en la que la música y el sonido afectan la mente humana.
+Jardin inconcluso 
 
-En el 2013 fue nombrado tutor del Departamento de Diseño de Producto en el Royal College of Art, también se ostentará el cargo de colaborador asociado para disney, New Radiophonic Workshop y el Teeneage Engieneering. Durante el mismo año crea el Yuri Suzuki Creative Lab que presta servicios de consultoría. 
+Una exposición nocturna de instalaciones audiovisuales que integra un recorrido sensorial único. donde se activa con la presencia del público. 
 
-Utiliza el sonido como medio para dar foma a los espacios e involucrar al público en un discurso social dinámico. Sus obras son sonoras como visuales, exploran la interrelaciones humanas, entrelazando diferentes aspectos de la cultura y el género para trascender fronteras. 
+Rafael Lozano-Hemmer: Jardín Inconcluso, Museo de Arte Moderno, Mexico City, México, February 10th - May 16th, 2026.
 
-## Obras
+https://feverup.com/m/553366?srsltid=AfmBOoo_EL_8m2ElS-fS_HYlBdkMLtscYlTWOQVQnfV11RTP6Q4ke0VO
 
-OTOTNOMORI-SOUND FOREST
+## Fuentes
 
-Escultura acústica en constante evolución que fomenta el juego, descanso y la conexión en el parque de Jing´an de Shanghái. 
+https://www.lozano-hemmer.com/bio.php?utm_source=chatgpt.com
 
-<img width="1920" height="1280" alt="image" src="https://github.com/user-attachments/assets/6c2f3ace-c78c-4e73-8e40-21f22c47a520" />
-
-THE PHYSICAL VALUE OF SOUND 
-
-Consiste en una serie de productos que permiten a las personas experimentar la fisicalidad de la música.
-
-<img width="2990" height="2243" alt="image" src="https://github.com/user-attachments/assets/ed6a0408-2ca5-474e-b723-459a3f180d85" />
-
-https://www.youtube.com/watch?v=Kcc9Q67HPnw
-
-THE AMBIENT MACHINE
-
-Instrumento táctil para crear la atmósfera sonora de nuestra vida cotidiana, una exploración de como el sonido influye nuestro estado de ánimo, la persepción y la presencia. Transforma el ruido de fondo en una composición intencional, permitiendo al usuario diseñar su propio ambiente sonoro mediante una interfaz táctil sencilla. 
-
-<img width="1400" height="1050" alt="image" src="https://github.com/user-attachments/assets/314a1439-10a6-497b-9c61-80c14632b884" />
-
-
-
-## Fuentes 
-
-https://open.spotify.com/intl-es/artist/3Wmgn7OmNzxVcwTQA21P2W
- 
-https://yurisuzuki.com/
-
-https://laboralcentrodearte.org/es/artistas-e-investigadores/yuri-suzuki/
