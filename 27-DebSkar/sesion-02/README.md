@@ -9,7 +9,8 @@ Hoy nos hicimos cuentas en Github, y nos enseñaron a usarlo. Tuvimos que hacer 
 * ## Descargar
   
   * Arduino IDE 2.3.5
-  * Visual Eclipse
+  * Visual 
+  * Eclipse
   * Mosquitto
 
 * #es Include
