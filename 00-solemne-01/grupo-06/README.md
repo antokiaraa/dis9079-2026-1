@@ -34,9 +34,9 @@ Luego, si presionábamos en el feed de ``brillo-led``, nos permitía ver un grá
 
 ![Pins Raspberry Pi Pico 2 W](./imagenes/Raspberry-Pi-Pico-2-W-Pinout.webp)
 
-![titulo](./imagenes/instalación-raspberrypiboards.jpeg)
+![Instalando bibliotecas para la placa Raspberry Pi Pico 2 W en Arduino IDE](./imagenes/instalación-raspberrypiboards.jpeg)
 
-![titulo](./imagenes/error-arduinoide.jpeg)
+![Error de puerto en Raspberry Pi Pico 2 W](./imagenes/error-arduinoide.jpeg)
 
 
 ## Aarón nos ayuda en el Lid
