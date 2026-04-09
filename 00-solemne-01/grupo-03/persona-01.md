@@ -73,3 +73,23 @@ Los valores se muestran en el serial monitor y en la sección de Feeds según se
 ![valores feeds](./imagenes/valoresfeeds2.png)
 
 ## sobre artista, diseñadora o producto que usa electrónica o computación inalámbricas
+
+Elegí investigar a Rafael Lozano-Hemmer, nacido en México en 1967, es un artista electrónico reconocido por sus instalaciones interactivas a gran escala. Se graduó en Química Física en la Universidad de Concordia en Montreal, Canadá. Desde finales de la década de 1990, ha desarrollado el concepto de "arquitectura relacional", que se centra en el uso de la tecnología para transformar espacios públicos y fomentar la interacción entre las personas y su entorno. 
+
+A lo largo de su carrera ha representado a México en eventos internacionales como la Bienal de Venecia (2007) y sus obras forman parte de colecciones en museos como el MoMA en Nueva York, la Tate en Londres y el Museo Reina Sofía en Madrid. Su trabajo se caracteriza por el uso de robótica, proyecciones digitales, sensores biométricos y redes de comunicación para crear experiencias en conjunto con el espectador mediante sus datos o movimientos.
+
+Me llamó la atención su proyecto "Cloud Display", es una instalación que lo que hace es unir la mecánica de el vapor del agua con el procesamiento de datos en tiempo real. Se trata de una pantalla efímera compuesta por una matriz de 1600 boquillas de ultrasonido que generan una fina niebla de agua. Cuenta con un sistema de reconocimiento de voz y cuando el participante habla frente a un micrófono, utiliza una forma de machine learning para convertir esa voz en texto y este se envía inalámbricamente a un controlador que activa las boquillas de vapor para "escribir" la palabra en el aire.
+
+Es muy interesante la sincronía lograda, el código no solo procesa la voz humana en tiempo real, sino que coordina a 1600 actuadores físicos para que el vapor de agua se comporte como una pantalla de texto legible y logra dar a entender que las máquinas dejen de ser simples herramientas para convertirse en extensiones de nuestra propia presencia en el espacio.
+
+![obra cloud display](./imagenes/clouddisplay.jpg)
+
+### Bibliografía
+
+Lozano-Hemmer, R. (2019). Cloud Display. https://www.lozano-hemmer.com/cloud_display.php
+
+Lozano-Hemmer, R. (s. f.). Biography. https://www.lozano-hemmer.com/bio.php
+
+Wikipedia. (2026). Rafael Lozano-Hemmer. https://es.wikipedia.org/wiki/Rafael_Lozano-Hemmer
+
+Roulx, O. (2019). Atmospheric Memory by Rafael Lozano-Hemmer: Cloud Display. Enki Magazine. https://enkimagazine.com/atmospheric-memory-hybrid-exhibition-merging-art-and-science/atmospheric-memory-by-rafael-lozano-hemmer-cloud-display-10-2019-at-unc2021-photo-by-olivier-groulx/
