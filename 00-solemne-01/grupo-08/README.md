@@ -7,21 +7,164 @@
 
 ## Descripción del proyecto
 El objetivo de esta experimentación fue establecer una comunicación robusta entre dos nodos de hardware independientes (Arduino UNO R4 WiFi). Implementamos un sistema donde un Arduino Emisor envía datos numéricos a la nube, y un Arduino Receptor captura esa información en tiempo real para procesarla y dibujarla físicamente en su matriz de LEDs de 12x8. Este proyecto integra conceptos de redes, protocolos de internet, actualización de firmware y programación.
-## Materiales usados en solemne-01
+## Materiales usados en la solemne-01
 
+- **2 Placas Arduino UNO R4 WiFi:** Con procesador Renesas RA4M1 y coprocesador de comunicaciones ESP32-S3.
+
+- **2 Matrices LED de 12x8:** Integradas en el hardware del Arduino UNO R4 para la visualización de datos y estados.
+
+- **2 Cables USB-C a USB-C:** Para la programación y alimentación de las placas.
+
+- **2 Computadores (PC/Laptop):** Estaciones de trabajo con Arduino IDE instalado.
+
+- **Plataforma IoT Adafruit IO:** Servicio en la nube para el dashboard de visualización.
+
+- **Red Local (Hotspot 2.4 GHz):** Punto de acceso dedicado para la conexión entre nodos.
 ## Código usado con Adafruit IO
 
-### Código para enviar
-
+### Código para enviar - Experimentación
 ```cpp
-// rellenar
+#include "AdafruitIO_WiFi.h"
+
+/*************** CREDENCIALES ************************/
+#define IO_USERNAME "TU_USUARIO_AQUÍ"
+#define IO_KEY "TU_KEY_AQUÍ"
+
+#define WIFI_SSID "TU_WIFI_AQUÍ"
+#define WIFI_PASS "TU_CLAVE_AQUÍ"
+
+// Configuración automática (incluye soporte tipo AirLift / UNO R4 WiFi)
+#if defined(USE_AIRLIFT) || defined(ADAFRUIT_METRO_M4_AIRLIFT_LITE) || \
+    defined(ADAFRUIT_PYPORTAL)
+
+  #define SPIWIFI SPI
+  #define SPIWIFI_SS 10
+  #define NINA_ACK 9
+  #define NINA_RESETN 6
+  #define NINA_GPIO0 -1
+
+  AdafruitIO_WiFi io(IO_USERNAME, IO_KEY, WIFI_SSID, WIFI_PASS,
+                     SPIWIFI_SS, NINA_ACK, NINA_RESETN, NINA_GPIO0, &SPIWIFI);
+
+#else
+
+  AdafruitIO_WiFi io(IO_USERNAME, IO_KEY, WIFI_SSID, WIFI_PASS);
+
+#endif
+
+/*************** PROGRAMA PRINCIPAL ************************/
+
+// Conexión al feed
+AdafruitIO_Feed *nombreFeed = io.feed("grupo08");
+
+int contador = 0;
+
+void setup() {
+  Serial.begin(115200);
+  while(!Serial);
+
+  Serial.print("Conectando con Adafruit IO...");
+
+  io.connect();
+
+  // Esperar conexión
+  while(io.status() < AIO_CONNECTED) {
+    Serial.print(".");
+    delay(500);
+  }
+
+  Serial.println();
+  Serial.println(io.statusText()); // Debería decir "Connected!"
+}
+
+void loop() {
+
+  io.run();  // Mantiene la conexión activa
+
+  // PRENDER el LED (pin 13)
+  digitalWrite(LED_BUILTIN, HIGH);
+
+  Serial.print("Enviando número -> ");
+  Serial.println(contador);
+
+  // Enviar dato a la nube
+  nombreFeed->save(contador);
+
+  // APAGAR el LED después de enviar
+  delay(200);
+  digitalWrite(LED_BUILTIN, LOW);
+
+  contador = contador + 2;
+
+  // Completa los 5 segundos
+  delay(4800);
+}
 ```
 
-### Código para recibir
+### Código para recibir - Experimentación
 
 ```cpp
-// rellenar
+
+#include "ArduinoGraphics.h" 
+#include "Arduino_LED_Matrix.h"   // Pantalla LED integrada
+#include "AdafruitIO_WiFi.h"
+
+/*************** CREDENCIALES ************************/
+#define IO_USERNAME "TU_USUARIO_AQUÍ"
+#define IO_KEY "TU_KEY_AQUÍ"
+
+#define WIFI_SSID "TU_WIFI_AQUÍ"
+#define WIFI_PASS "TU_CLAVE_AQUÍ"
+
+/*************** OBJETOS ************************/
+
+AdafruitIO_WiFi io(IO_USERNAME, IO_KEY, WIFI_SSID, WIFI_PASS);
+
+ArduinoLEDMatrix matrix;
+
+// Feed desde donde se va a LEER
+AdafruitIO_Feed *nombreFeed = io.feed("grupo08");
+
+/*************** SETUP ************************/
+
+void setup() {
+  Serial.begin(115200);
+
+  matrix.begin();  // Iniciar pantalla LED
+
+  Serial.print("Conectando a Adafruit IO...");
+  io.connect();
+
+  // Cuando llegue un dato → ejecutar leerMensaje
+  nombreFeed->onMessage(leerMensaje);
+
+  while(io.status() < AIO_CONNECTED) {
+    Serial.print(".");
+    delay(500);
+  }
+
+  Serial.println();
+  Serial.println(io.statusText());
+}
+
+/*************** LOOP ************************/
+
+void loop() {
+  io.run();  // Mantiene conexión y recibe datos
+}
+
+/***************** FUNCIÓN DE RECEPCIÓN *****************/
+void leerMensaje(AdafruitIO_Data *data) {
+   matrix.beginDraw();
+   matrix.stroke(0xFFFFFFFF);
+  matrix.textFont(Font_5x7);
+  matrix.beginText(2.9, 1, 0xFFFFFFFF);
+   matrix.print(data->value());
+  matrix.endText();
+   matrix.endDraw(); 
+}
 ```
+⚠️ Nota: Para ejecutar este código, tienes que sustituir los valores en la sección CREDENCIALES con sus propios datos de Adafruit IO y red Wi-Fi.
 
 ## Desarrollo Experimentación
 **1. Configuración de Hardware y "Capa Física" (Networking)**
@@ -108,10 +251,8 @@ En estos clips mostramos cómo el sistema reacciona en tiempo real. Al cambiar e
 
 
 <table border="0"> <td width="45%" style="border: none; vertical-align: top;"> <p align="center"></p> <video src="https://github.com/user-attachments/assets/ff3b8657-e86f-4fdb-aae0-ed10e34156e5" width="100%" controls></video> </td> <td width="54%" style="border: none; vertical-align: top;"> <p align="center"></p> <video src="https://github.com/user-attachments/assets/7c8131af-6485-4b59-a244-490a2112a15b" width="50%" controls></video> </td> </tr> </table> <p align="center"> <i><b>Grabaciones de pantalla:</b> Demostración del flujo del programa.</i> </p>
-
-
 <table border="0"> <td width="60%" style="border: none; vertical-align: top;"> <p align="center"></p> <video src="https://github.com/user-attachments/assets/f0258dea-b035-4439-9752-2616746d6365" width="100%" controls></video> </td> <td width="50%" style="border: none; vertical-align: top;"> <p align="center"></p> <video src="https://github.com/user-attachments/assets/8137d971-f737-4541-b7f0-2836553962c1" width="100%" controls></video> </td> </tr> </table> <p align="center"> <i><b>Videos pruebas:</b> Demostración de la comunicación en tiempo real.</i> </p>
-
+<div align="center"> <img src="https://github.com/user-attachments/assets/b726ee7b-c2ba-4e0b-8bb0-10ed85315eb7" width="1000px"> <p><b>Imagen 11:</b> Visualización de la actividad de datos en el dashboard de Adafruit IO (7-10 de abril).</p> </div>
 
 
 8. Conclusiones del Grupo
