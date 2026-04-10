@@ -1,4 +1,4 @@
-# Persona03-Débora Soto Valenzuela 
+# Persona02-Débora Soto Valenzuela 
 
 investigaciones individuales
 
@@ -20,6 +20,9 @@ Su obra es una mezcla de realidad aumentada y virtual,que busca la  creación de
 Es por esto que en sus obras fusiona diferentes medios, crea imágenes a partir de objetos 3D, o al revés transformando objetos 3D en pinturas.
 
 Una de sus obras más notables es *"Clouds"* (2011- presente), una serie de animaciones que mediante software crea imágenes que simulan fenómenos naturales.
+
+Otra obra notable de Ludy es *"SubSurface Hell"*, para Bitforms Gallery.
+en esta instalación se distribuyen en el espacio imágenes personales de la vida cotidiana de Sara, fotos que venía recolectando desde el año 2000 y que tenía guardada en una carpeta con el nombre de *SubSurface Hell*, estás imágenes son reconocibles en forma, pero se desvinculan de sus experiencias y contextos originales
 
 
 
