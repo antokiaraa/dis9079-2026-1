@@ -145,6 +145,20 @@ Se recomienda configurar tu Raspberry Pi usando esa documentación y luego exper
 
 - nos muestran que se pueden pedir las piezas impresas en 3d PLA y nosotros mismos las afinamos
 
+![armado](./imagenes/donkeyArmado.JPG)
+
+fuente: [donkey](https://docs.donkeycar.com/guide/build_hardware/)
+
+- otro paso importantes es el uso de un servoShield que lo debemos conectar a la raspberry pi
+
+- El controlador de servos PCA9685 puede controlar hasta 16 dispositivos PWM como servos, controladores de motor, LEDs o casi cualquier cosa que utilice una señal PWM. Se conecta a la Raspberry Pi (o Jetson Nano) mediante el bus GPIO de 40 pines a través de los pines I2C.
+
+- no conocía este controlador en verdad, me sorprende harto que pueda mover tantos dispositivos pwm, brígido
+
+![i2c](./imagenes/I2CPCA.jpg)
+
+fuente: [digipart](https://www.digipart.com/part/PCA9685PW118?kw=PCA9685PW118&utm_source=bing&utm_medium=cpc&utm_campaign=Tier_F&utm_term=PCA9685PW118&utm_content=Tier_F_1)
+
 
 
 **Software**
