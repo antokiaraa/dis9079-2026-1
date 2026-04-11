@@ -46,4 +46,11 @@ AdafruitIO_WiFi io(IO_USERNAME, IO_KEY, WIFI_SSID, WIFI_PASS, SPIWIFI_SS,
 AdafruitIO_WiFi io(IO_USERNAME, IO_KEY, WIFI_SSID, WIFI_PASS);
 #endif
 ```
-```
+
+Al actualizar la placa de Arduino el sistema nos dejaba en la versión 0.4.1. Nos marcaba que la última era la 0.5.2, pero nos dimos cuenta de que esa tampoco era la versión final real.
+
+El código funcionaba bien en el compu de Marlen y en el mío no, al final era simplemente porque yo arrastraba un error al copiar y pegar el texto.
+
+Estuvimos varios intentos a ciegas porque por alguna razón no nos salía la velocidad en el programa, así que no teníamos cómo ver en qué parte del proceso estábamos. Terminamos cerrando el Arduino y volviéndolo a abrir; después de eso agarró y nos funcionó, aunque se demoró en cargar :).
+
+Me quedé pegada tratando de conectar la placa, y resulta que en las credenciales había copiado mal la contraseña y dejé puesto el "bla" del ejemplo. Por ese puro detalle no me funcionaba nada.
