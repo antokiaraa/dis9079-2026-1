@@ -7,7 +7,7 @@ solemne 1
 En esta clase avanzamos en nuestros proyectos para la solemne junto a mi compañero Benjamín Álvarez.
 
 Primero trabajamos con el Arduino y Adafruit para hacer un ejercicio de enviar un mensaje a Aaron, el cual era "grupo11ദ്ദി˙ᗜ˙
-", nos funcionó entonces logramos entender mejor como funcionaba y poder empezar bien nuestro proyecto:
+", nos funcionó entonces logramos entender mejor como funcionaba y poder empezar bien nuestro proyecto.
 
  ![foto](./imagenes/adafruit1.png)
 
