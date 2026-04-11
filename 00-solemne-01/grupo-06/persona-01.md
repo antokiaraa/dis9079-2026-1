@@ -55,6 +55,18 @@ La Raspberry Pi Pico 2 W es una placa basada en un microcontrolador, lo que sign
 
 En su interior tiene un chip que procesa instrucciones, memoria para almacenar el código y pines que permiten interactuar con el mundo físico. Estos pines pueden configurarse como entrada o salida, lo que permite leer datos (como un potenciómetro) o controlar dispositivos (como un LED).
 
+
+## Creación de la Raspberry Pi Pico 2W
+
+La Raspberry Pi Pico 2 W fue desarrollada por la Raspberry Pi Foundation, una organización enfocada en la educación tecnológica y en hacer la computación más accesible.
+
+Esta fundación tiene su origen en Cambridge, y desde ahí han desarrollado distintos dispositivos pensados tanto para estudiantes como para proyectos profesionales.
+
+La línea Pico fue lanzada inicialmente en el año 2021, y versiones más recientes como la Pico 2 W incorporan mejoras en rendimiento y conectividad, especialmente la inclusión de WiFi, lo que la posiciona dentro del mundo del Internet de las Cosas (IoT).
+
+Lo interesante es que no fue creada solo como un producto comercial, sino también como una herramienta educativa, lo que explica por qué es tan utilizada en contextos de aprendizaje, como en clases o proyectos universitarios.
+
+
 ## Relación con electrónica y computación inalámbrica
 
 La inclusión de WiFi es lo que convierte a esta placa en un dispositivo IoT (Internet of Things). Esto significa que no solo interactúa localmente, sino que puede comunicarse con otros dispositivos a través de internet.
