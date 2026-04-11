@@ -74,7 +74,6 @@ logramos hacer que el potenciómetro funcionara!
 
 ![pot](./imagenes/pot.png)
 ![pot](./imagenes/potfeed.png)
-![pot](./imagenes/potconexión.heic)
 
 Luego de hacer que el potenciametro funcionara, ocupamos de base el código de adafruitio_01_subscribe.ino ubicado en <https://github.com/adafruit/Adafruit_IO_Arduino/blob/master/examples/adafruitio_01_subscribe/adafruitio_01_subscribe.ino> para hacer el código de recibir.
 
