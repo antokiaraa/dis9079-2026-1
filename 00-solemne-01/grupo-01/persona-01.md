@@ -2,7 +2,7 @@
 
 investigaciones individuales
 
-## sobre adafruit i/o
+## sobre Adafruit IO
 
 Conceptos básicos de Adafruit IO: Fuentes de datos
 
