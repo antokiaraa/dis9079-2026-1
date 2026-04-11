@@ -37,3 +37,4 @@ Su trabajo combina dibujo tradicional, inteligencia artificial y robótica para 
 
 A nivel conceptual, su trabajo aborda temas como la autoría, el control y la colaboración entre humanos y sistemas tecnológicos. Plantea preguntas sobre quién crea realmente la obra y hasta qué punto la inteligencia artificial puede considerarse creativa. Además, investiga cómo los gestos humanos pueden ser traducidos a lenguaje digital, generando una fusión entre lo físico y lo virtual.
 
+![artista](./imagenes/aa_Sougwen_Chung.png)
