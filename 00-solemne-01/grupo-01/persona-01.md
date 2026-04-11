@@ -45,7 +45,7 @@ Para usuarios que utilizan la plataforma de configuración sin código, la gesti
 
 *información sacada de: <https://learn.adafruit.com/adafruit-io-basics-dashboards>*
 
-#### Dashboards
+### Dashboards
 
 Los paneles de control son la interfaz visual de Adafruit IO que permite visualizar datos y controlar dispositivos en tiempo real.
 
@@ -66,7 +66,7 @@ Así se ve como pagina principal
 
 <img src="./imagenes/sofiacartes_imagenes/instalaciónAdaIO.jpg" alt="install" width="700">
 
-##### Llave para colocar en el código en arduino
+### Llave para colocar en el código en arduino
 
 ```cpp
 #define IO_USERNAME  "sofiacartess"
@@ -183,14 +183,90 @@ void loop()
 
 este fue parte del trabajo en clases en grupo 
 
+### Conexión con Adafruit IO
+
+´´´cpp
+AdafruitIO_Feed *grupo01 = io.feed("grupo01");
+´´´
+
+Se define un feed llamado "grupo01".
+
+Este feed funciona como canal de comunicación, envío/recepción.
+
+### Recepción de datos desde Adafruit IO
+
+´´´cpp
+void handleMessage(AdafruitIO_Data *data)
+´´´
+
+Esta función se realiza cada vez que llega un dato desde el feed.
+
+´´´cpp
+String valor = data->value();
+´´´
+
+Obtiene el valor enviado, en este caso ON/OFF.
+
+´´´cpp
+if(valor == "ON") {
+  oledEncendida = true;
+} else {
+  oledEncendida = false;
+}
+´´´
+
+Controla el estado de la pantalla según el mensaje recibido.
+
+*estas son partes del código final, el cual se buscó para lograr los ON/OFF con la pantalla.*
+
+### Wokwi Animator
+
+*Investigación a parte*
+
+#### ¿Qué es Wokwi Animator?
+
+Wokwi Animator es una herramienta web que permite convertir imágenes o animaciones en código compatible con pantallas OLED utilizadas en Arduino o ESP32.
+
+Funciona dentro del ecosistema de Wokwi, un simulador online de circuitos electrónicos donde se puede probar proyectos sin hardware físico.
+
+Su principal función es generar automáticamente los frames en formato bitmap, listos para ser usados en código.
+
+*Logra que se vea así en la pantalla OLED* 
+
+<img src="./imagenes/sofiacartes_imagenes/imagenFinal.jpg" alt="install" width="600">
+
 ## sobre artista, diseñadora o producto que usa electrónica o computación inalámbricas
 
-<img src="./imagenes/sofiacartes_imagenes/SuhayyaAbu-Hakima.jpg" alt="install" width="700">
+### Suhayya Abu-Hakima
 
-Suhayya Abu-Hakima es una emprendedora e inventora canadiense especializada en inteligencia artificial, comunicaciones inalámbricas y seguridad informática. Fundó AmikaNow! y posteriormente Amika Mobile, donde lideró el desarrollo de tecnologías innovadoras para la comunicación en contextos críticos.
+<img src="./imagenes/sofiacartes_imagenes/SuhayyaAbu-Hakima.jpg" alt="install" width="500">
 
-Su principal aporte en el ámbito inalámbrico fue el Amika Mobility Server, un sistema capaz de establecer conexiones automáticas con dispositivos móviles y computadoras para distribuir alertas de emergencia en tiempo real a través de múltiples canales, como SMS, correo electrónico, voz y notificaciones emergentes, además de permitir la interacción y respuesta de los usuarios. Esta tecnología hizo posible la implementación de sistemas de notificación masiva altamente eficientes para seguridad pública, gestión de crisis y comunicación institucional, lo que llevó a la empresa a recibir numerosos premios internacionales, incluidos reconocimientos consecutivos en los premios GOVIES y el ASIS Judge’s Choice.
+#### ¿Quién es Suhayya Abu-Hakima?
 
-A lo largo de su carrera ha publicado más de 125 trabajos y posee 48 patentes en áreas como mensajería, análisis de contenido y seguridad. En 2020, tras la venta de parte del negocio a Genasys, fundó Alstari Corporation, donde continúa desarrollando soluciones que integran inteligencia artificial con comunicaciones seguras y éticas, manteniendo su enfoque en la protección y la innovación tecnológica.
+Suhayya Abu-Hakima es una científica, emprendedora y experta en tecnología inalámbrica nacida en Jordania y radicada en Canadá. Es reconocida por su trabajo en el desarrollo de sistemas de comunicación móvil y plataformas de alerta masiva.
+Es cofundadora de la empresa Amika Mobile, donde desarrolló soluciones que permiten enviar mensajes de emergencia a múltiples dispositivos móviles en situaciones críticas. Su trabajo se enfoca en el uso de redes inalámbricas para mejorar la comunicación en contextos de riesgo, como desastres naturales o emergencias públicas.
+Además, ha sido una figura importante en el desarrollo de tecnologías de redes móviles y ha contribuido a la investigación en áreas como redes distribuidas y sistemas de comunicación en tiempo real.
+
+#### ¿Qué desarrolló Suhayya Abu-Hakima?
+
+Desarrolló tecnologías de comunicación inalámbrica enfocadas en la transmisión de alertas masivas en tiempo real.
+Uno de sus principales aportes fue el desarrollo del Amika Mobility Server, un sistema capaz de conectarse automáticamente con teléfonos móviles y computadores cercanos para enviar notificaciones críticas sin necesidad de intervención manual.
+
+#### ¿Cómo funciona su tecnología de comunicación?
+
+- Su sistema se basa en redes inalámbricas que permiten establecer conexiones automáticas con dispositivos dentro de un área determinada.
+- Detecta dispositivos móviles disponibles en la red.
+- Establece conexiones de forma automática.
+- Envía mensajes de alerta en tiempo real a múltiples usuarios simultáneamente.
+- Esto permite una comunicación rápida, directa y eficiente, especialmente en situaciones donde los canales tradicionales pueden fallar o colapsar.
+- Su enfoque prioriza la inmediatez y la cobertura, asegurando que la información llegue a la mayor cantidad de personas posible en el menor tiempo.
+
+#### ¿Qué aplicaciones actuales tiene su tecnología?
+
+- Sistemas de alerta de emergencia en universidades, ciudades y edificios corporativos.
+- Notificaciones masivas en caso de desastres naturales o evacuaciones.
+- Plataformas de comunicación en crisis para gobiernos y organizaciones.
+- Sistemas de seguridad pública que requieren difusión rápida de información.
+- Infraestructura de ciudades inteligentes (smart cities) para gestión de riesgos.
 
 Es genial :)
