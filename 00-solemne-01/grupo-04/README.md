@@ -63,6 +63,7 @@ AdafruitIO_WiFi io(IO_USERNAME, IO_KEY, WIFI_SSID, WIFI_PASS);
 ```
 
 ## investigaciones individuales
+
 *antonella lavalle-persona 01
 * catalina salinas-persona 02
 * martina alegria-persona 03
