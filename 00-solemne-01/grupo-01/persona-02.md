@@ -1,5 +1,5 @@
 # persona-02
-
+Monserrat Paredes Correa
 investigaciones individuales
 
 ## Investigación Adafruit IO
