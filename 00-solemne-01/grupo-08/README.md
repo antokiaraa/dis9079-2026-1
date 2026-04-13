@@ -16,7 +16,7 @@ Este proyecto nació como un ejercicio práctico preestablecido por nuestro prof
 | 1 | Arduino UNO R4 WiFi | Placa principal para testear la conexión a internet. |
 | 1 | Cable USB-C | Conexión física para cargar el código desde el PC. |
 | 1 | Arduino IDE (Software) | Entorno instalado en el PC para programar la placa. |
-| 1 | Librería Adafruit IO | Software necesario para que el Arduino hable con la nube. |
+| 1 | Biblioteca Adafruit IO | Software necesario para que el Arduino hable con la nube. |
 | 1 | Cuenta Adafruit IO | Registro en la plataforma para recibir los primeros datos. |
 | 1 | Hotspot Móvil / WiFi | Red de 2.4 GHz necesaria para la salida a internet. |
 
@@ -58,7 +58,7 @@ AdafruitIO_WiFi io(IO_USERNAME, IO_KEY, WIFI_SSID, WIFI_PASS);
 
 Primer Acercamiento: Conexión a Adafruit IO
 
-Para ser súper honestos, cuando empezamos el lunes no teníamos mucho manejo del Arduino UNO R4 WiFi ni de cómo funcionaba Adafruit IO. Estábamos recién instalando las librerías en los PC (como se puede evidenciar en nuestras bitacoras personales) y siguiendo el ejercicio base que nos dejó el profesor para el grupo08.
+Para ser súper honestos, cuando empezamos el lunes no teníamos mucho manejo del Arduino UNO R4 WiFi ni de cómo funcionaba Adafruit IO. Estábamos recién instalando las bibliotecas en los PC (como se puede evidenciar en nuestras bitacoras personales) y siguiendo el ejercicio base que nos dejó el profesor para el grupo08.
 
 <p align="center"> <img src="https://github.com/user-attachments/assets/9e2fa931-7cbc-4c0f-bc64-3fa5687f1c78" width="20%" style="margin-right: 5px;" alt="Carpeta Grupo"> <img src="https://github.com/user-attachments/assets/fe301c25-7a45-4092-a962-fceebd42ce7b" width="32%" style="margin-right: 5px;" alt="Archivos Código"> <img src="https://github.com/user-attachments/assets/8491ad76-1784-4c08-a075-0df2c04c6964" width="38%" alt="Código Base"> </p> <p align="center"> <i><b>Imagen 01, 02 y 03:</b> Proceso inicial de búsqueda y descarga del código base compartido por el profesor para la configuración del grupo08.</i> </p>
 
@@ -175,7 +175,7 @@ El objetivo de esta experimentación fue establecer una comunicación robusta en
 | 2 | Placas Arduino UNO R4 WiFi | Procesador Renesas RA4M1 y coprocesador ESP32-S3. |
 | 2 | Matrices LED (12x8) | Integradas en el hardware para visualización de datos. |
 | 2 | Cables USB-C | Conexión para programación y alimentación de las placas. |
-| 2 | Estaciones de Trabajo | Computadores con Arduino IDE y librerías instaladas. |
+| 2 | Estaciones de Trabajo | Computadores con Arduino IDE y bibliotecas instaladas. |
 | 1 | Plataforma Adafruit IO | Servicio en la nube para gestión de feeds y dashboard. |
 | 1 | Red Local (Hotspot) | Punto de acceso WiFi dedicado en banda 2.4 GHz. |
 
@@ -355,15 +355,15 @@ Uno de los mayores obstáculos técnicos fue la incompatibilidad del software ba
 
 Microcontrolador: Es un sistema de computación diseñado para realizar una función específica dentro de un producto más grande (como el chip que controla tu lavadora o el sistema de frenos de un auto). A diferencia de una PC, no es para uso general.
 
-**3. Arquitectura de Software y Librerías**
+**3. Arquitectura de Software y Bibliotecas**
 
-Para que el código compilara sin errores, aplicamos una jerarquía estricta de librerías. Aprendimos que C++ procesa las instrucciones en orden, por lo que la estructura fue:
+Para que el código compilara sin errores, aplicamos una jerarquía estricta de bibliotecas. Aprendimos que C++ procesa las instrucciones en orden, por lo que la estructura fue:
 
 1. AdafruitIO_WiFi.h: Gestiona la pila de protocolos TCP/IP y la conexión al servidor.
 2. ArduinoGraphics.h: Carga el motor lógico de dibujo en la memoria RAM.
 3. Arduino_LED_Matrix.h: Define el controlador físico de los 96 LEDs.
 
-<p align="center"> <img src="https://github.com/user-attachments/assets/e44e209b-2b5b-4035-88bc-4abd47e1fdfb" width="51%" style="margin-right: 10px;" alt="Código de ejemplo oficial"> <img src="https://github.com/user-attachments/assets/6b000717-ca2f-432e-b802-e2e4ef6b8fd8" width="34%" alt="Menú de ejemplos en el IDE"> </p> <p align="center"> <i><b>Imagen 15 y 16:</b> Análisis del ejemplo oficial "TextWithArduinoGraphics" y la ruta de acceso a las librerías de la matriz LED en el Arduino IDE.</i> </p>
+<p align="center"> <img src="https://github.com/user-attachments/assets/e44e209b-2b5b-4035-88bc-4abd47e1fdfb" width="51%" style="margin-right: 10px;" alt="Código de ejemplo oficial"> <img src="https://github.com/user-attachments/assets/6b000717-ca2f-432e-b802-e2e4ef6b8fd8" width="34%" alt="Menú de ejemplos en el IDE"> </p> <p align="center"> <i><b>Imagen 15 y 16:</b> Análisis del ejemplo oficial "TextWithArduinoGraphics" y la ruta de acceso a las bibliotecas de la matriz LED en el Arduino IDE.</i> </p>
 
 ❗Punto Clave: Invertir este orden causaba errores de compilación, ya que la matriz intentaba usar funciones gráficas que aún no habían sido declaradas en la memoria volátil del Arduino.
 
@@ -420,7 +420,7 @@ En estos clips mostramos cómo el sistema reacciona en tiempo real. Al cambiar e
 1. Conclusiones del Grupo
 
 * **La resiliencia es clave:** fallar en el firmware o en la frecuencia del WiFi nos obligó a investigar a fondo el hardware.
-* **La documentación importa:** entender el orden de las librerías y los baudios nos ahorró horas de errores inexplicables.
+* **La documentación importa:** entender el orden de las bibliotecas y los baudios nos ahorró horas de errores inexplicables.
 * **El IoT es un ecosistema:** logramos que dos dispositivos distantes actúen como una sola unidad funcional gracias a una lógica de programación bien estructurada.
   
 ## Definiciones
