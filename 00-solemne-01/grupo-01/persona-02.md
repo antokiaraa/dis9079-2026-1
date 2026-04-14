@@ -40,13 +40,13 @@ Incluye bibliotecas para lenguajes como CircuitPython, Arduino, Python y otros, 
 
 ## Sirve para
 
--Enviar datos de sensores.
+- Enviar datos de sensores.
 
 - Mandar estados o eventos.
 
 - Ej: “botón presionado”, “LED encendido”.
 
--Ej: “botón presionado”, “LED encendido”.
+- Ej: “botón presionado”, “LED encendido”.
 
 - Visualizar datos en paneles.
 
@@ -131,7 +131,7 @@ Después de crear la cuenta se ve así el inicio de sesión:
 # define WIFI_PASS "password"
 ```
 
- Este archivo NO debe subirse completo a GitHub.
+Este archivo NO debe subirse completo a GitHub.
 
 ## Configuración del código
 
@@ -161,7 +161,7 @@ La idea es crear un puente invisible entre un aparato físico (Arduino r4 wifi) 
 
 - Wifi (mensajero): Es el túnel invisible que saca la información y la sube a internet.
 
--Adafruit IO (la central): Es como un panel de control en la web donde llegan todos los datos. Ahí se guardan, se ordenan y se muestran en una pantalla.
+- Adafruit IO (la central): Es como un panel de control en la web donde llegan todos los datos. Ahí se guardan, se ordenan y se muestran en una pantalla.
 
 Objetivo: al presionar el botón enviara una señal al código para que diera la señal de 0 o 1 y luego visualizar los datos en  Adafruit IO para ver gráficos en tiempo real.
 
@@ -181,7 +181,9 @@ Credenciales obligatorias:
 
 ## Función importante
 
+```cpp
 io.run();
+```
 
 - Mantiene la conexión activa
 - Permite recibir datos
@@ -189,19 +191,21 @@ io.run();
 ## Creación de feed
 
 AdafruitIO_Feed *nombreFeed = io.feed("grupo01");
--Define el canal de comunicación
+
+Define el canal de comunicación
 
 ## Envío de datos
 
 nombreFeed->save(contador);
--Envía datos a la nube
+
+Envía datos a la nube
 
 ## Problemas durante el proceso
 
 1.Caracteres extraños en monitor serial
 
--Aparecían signos de interrogación (???)
--Causa: baudios incorrectos
+- Aparecían signos de interrogación (???)
+- Causa: baudios incorrectos
 
 <img width="621" height="530" alt="signos de interrogación arduino" src="https://github.com/user-attachments/assets/f9aefffe-a976-495b-8ea8-77d04a10206f" />
 
@@ -217,9 +221,10 @@ nombreFeed->save(contador);
 
 ## 2. El "Botón de Reset" accidental
 
--Al conectar el pulsador al pin A0, se generó un puente eléctrico que replicó la función del botón de reinicio maestro de la placa. Esto permitió que, al presionar el botón en la protoboard, el Arduino se reiniciara por completo, tal como si hubieras presionado el botón rojo integrado en la placa.
+Al conectar el pulsador al pin A0, se generó un puente eléctrico que replicó la función del botón de reinicio maestro de la placa. Esto permitió que, al presionar el botón en la protoboard, el Arduino se reiniciara por completo, tal como si hubieras presionado el botón rojo integrado en la placa.
 
--El cableado o el contacto en la protoboard activó el sistema de Reset. Esto corta la corriente por un milisegundo y obliga al programa a empezar desde cero.
+
+El cableado o el contacto en la protoboard activó el sistema de Reset. Esto corta la corriente por un milisegundo y obliga al programa a empezar desde cero.
 
 ![conexiones](https://github.com/user-attachments/assets/6bfb2ee4-a20b-4b3c-a39b-f006728e982c)
 
@@ -231,21 +236,24 @@ nombreFeed->save(contador);
 
 ## Código final funcional (Ya validado en clases)
 
--Envío de datos cada 3 segundos al presionar botón.
+- Envío de datos cada 3 segundos al presionar botón.
 
--Contador incremental.
+- Contador incremental.
 
--Conexión estable a Adafruit IO.
+- Conexión estable a Adafruit IO.
 
 ## Solución: Reasignación de Pines
 
--Se movió la conexión del pulsador del pin A0 al Pin 1.
+Se movió la conexión del pulsador del pin A0 al Pin 1.
 
--El conflicto eléctrico desapareció, permitiendo que el botón cumpliera su función real: enviar una señal digital que el Arduino procesa y transmite exitosamente a la nube en Adafruit IO.
+
+El conflicto eléctrico desapareció, permitiendo que el botón cumpliera su función real: enviar una señal digital que el Arduino procesa y transmite exitosamente a la nube en Adafruit IO.
 
 <https://github.com/user-attachments/assets/7d37e7d6-8936-4bfe-80cf-9d870718c144>
 
+
 Adafruit IO para ver gráficos en tiempo real con los datos enviados.
+
 
 <img width="1470" height="956" alt="prueba 2 grupo01" src="https://github.com/user-attachments/assets/7f8acb54-61d5-4375-9776-09911aa10fb1" />
 
@@ -253,35 +261,41 @@ Adafruit IO para ver gráficos en tiempo real con los datos enviados.
 
 ## Reflexión del proceso
 
-*Aprendizajes técnicos:
 
--Diferencia entre hardware, software y firmware.
+Aprendizajes técnicos:
 
--Importancia de la configuración de red.
+- Diferencia entre hardware, software y firmware.
 
--Uso de plataformas IoT.
+- Importancia de la configuración de red.
 
--Comunicación entre dispositivos remotos
+- Uso de plataformas IoT.
+
+- Comunicación entre dispositivos remotos
 
 *Aprendizajes prácticos:
 
--Los errores más comunes son simples (baudios, claves).
+- Los errores más comunes son simples (baudios, claves).
 
--La conexión WiFi es el punto más crítico.
+- La conexión WiFi es el punto más crítico.
 
--Separar credenciales en config.h es buena práctica.
+- Separar credenciales en config.h es buena práctica.
 
--En Adafruit IO, te da la llave para colocar en el código en arduino.
+- En Adafruit IO, te da la llave para colocar en el código en arduino.
 
--El delay(3000) evita sobrecargar la plataforma (limitación de escritura).
+- El delay(3000) evita sobrecargar la plataforma (limitación de escritura).
 
 Siempre hay que colocar esa línea, para que el arduino no olvide el adafruit IO
 
+
+```cpp
 io.run();
+```
 
 Es para ver lo que manda el otro arduino en adafruit
 
+```cpp
 io.feed();
+```
 
 ## Código que si funciona + el config.hes donde se guarda la clave de Adafruit IO y la clave de wifi
 
@@ -402,17 +416,33 @@ Sus obras son robots biotecnológicos que viven en entornos de ríos contaminado
 
 -Inalámbrico/IoT: El robot se desplaza de forma autónoma buscando agua contaminada para "alimentarse". Transmite datos sobre la calidad del agua y su propia ubicación, creando un mapa vivo de la degradación ambiental. Es, literalmente, un "sensor vivo" que habita la ciudad.
 
+
 Fotos del proyecto:
 
 ![plantas nomadas1](https://github.com/user-attachments/assets/4a845657-1d32-436e-b5f1-31cf06fae21d)
 
 ![plantas nomadas2](https://github.com/user-attachments/assets/12098d65-fc21-40b3-816b-1f9296989a3f)
 
+
 Dibujo de la contaminación (problematica)
+
 
 <img width="1470" height="956" alt="plantas nomadas4" src="https://github.com/user-attachments/assets/c39dbe2f-59db-46e8-9725-92ee6973f528" />
 
-Informacion sobre bio: <https://gilbertoesparza.net/bio/>
+
+Planta Nómada Fitocrista errantis:
+
+
+<img width="901" height="1030" alt="plantas nomadas3" src="https://github.com/user-attachments/assets/8b325e61-9955-4f7e-b968-e2413661cb5a" />
+
+
+Uso de Tecnología: Robótica autónoma y sensores de agua.
+
+Así como nosotros configuramos una clave de WiFi para que nuestro Arduino se conecte, Gilberto Esparza configura sus robots para que 'entiendan' la red de contaminación de un río, transformando un dato invisible en una acción física.
+
+## Información sacada
+
+Biografía: <https://gilbertoesparza.net/bio/>
 
 Proyecto: <https://gilbertoesparza.net/portfolio/plantas-nomadas/>
 
@@ -420,10 +450,3 @@ Video descriptivo: <https://www.youtube.com/watch?v=US9q2ayKANk&t=2s>
 
 Redes sociales: <https://www.instagram.com/gilbertoesparzaglez/>
 
-Planta Nómada Fitocrista errantis:
-
-<img width="901" height="1030" alt="plantas nomadas3" src="https://github.com/user-attachments/assets/8b325e61-9955-4f7e-b968-e2413661cb5a" />
-
-Uso de Tecnología: Robótica autónoma y sensores de agua.
-
-Así como nosotros configuramos una clave de WiFi para que nuestro Arduino se conecte, Gilberto Esparza configura sus robots para que 'entiendan' la red de contaminación de un río, transformando un dato invisible en una acción física.
