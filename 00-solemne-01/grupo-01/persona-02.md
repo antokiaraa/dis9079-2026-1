@@ -34,9 +34,9 @@ Incluye bibliotecas para lenguajes como CircuitPython, Arduino, Python y otros, 
 
 - Dashboard: visualización de datos.
 
-- IO_KEY: clave privada de acceso.
+IO_KEY: clave privada de acceso.
 
-- IO_USERNAME: usuario.
+IO_USERNAME: usuario.
 
 ## Sirve para
 
@@ -78,20 +78,16 @@ Software utilizado:
 - Buscar: Adafruit IO Arduino.
 - Instalar versión 4.3.4 (abril 2026) o superior.
 
-- Abrir Arduino IDE.
-- Dirigirse al menú lateral izquierdo, icono de Library Manager (ícono lateral izquierdo).
-- Buscar: Adafruit IO Arduino.
-- Instalar versión 4.3.4 (abril 2026) o superior.
-
 <img width="445" height="386" alt="Libreria arduino" src="https://github.com/user-attachments/assets/d41cf0e5-0742-459a-81c9-512495ffe6f0" />
+
 
 ## Aprendizajes
 
-- Las librerías no funcionan solas: necesitan dependencias.
+- Las bibliotecas no funcionan solas: necesitan dependencias.
 
 - Arduino automatiza la instalación, pero hay que aceptar manualmente.
 
-- La versión de librería puede afectar compatibilidad.
+- La versión de biblioteca puede afectar compatibilidad.
 
 ## Creación de cuenta en Adafruit IO
 
@@ -105,30 +101,32 @@ Software utilizado:
 
 Así se ve cuando creas la cuenta y configuraciones:
 
+
 <img width="1244" height="785" alt="inicio sesion" src="https://github.com/user-attachments/assets/22641bc6-16a8-4bef-be95-4d321ec27b9f" />
+
 
 Después de crear la cuenta se ve así el inicio de sesión:
 
+
 <img width="1374" height="736" alt="inicio io" src="https://github.com/user-attachments/assets/176ee3ef-e288-40c9-aaba-d337fe1b199c" />
+
 
 ## Tener en cuenta por seguridad
 
-- NO subir claves a GitHub.
+NO subir claves a GitHub.
 
-- NO compartir públicamente.
+NO compartir públicamente.
 
-- Compartir solo por medios privados.
+Compartir solo por medios privados.
 
 ```cpp
-# define IO_USERNAME "usuario"
-
-# define IO_KEY "clave"
+#define IO_USERNAME "tu_usuario"
+#define IO_KEY "tu_clave"
 ```
 
 ```cpp
-# define WIFI_SSID "wifi"
-
-# define WIFI_PASS "password"
+#define WIFI_SSID "nombre_de_tu_red"
+#define WIFI_PASS "password_de_tu_red"
 ```
 
 Este archivo NO debe subirse completo a GitHub.
@@ -165,17 +163,17 @@ La idea es crear un puente invisible entre un aparato físico (Arduino r4 wifi) 
 
 Objetivo: al presionar el botón enviara una señal al código para que diera la señal de 0 o 1 y luego visualizar los datos en  Adafruit IO para ver gráficos en tiempo real.
 
-- 0= no presionar el botón.
+0= no presionar el botón.
 
-- 1=presionar el boton.
+1=presionar el boton.
 
 ## Elementos clave del código: usamos el wifi de la Vale
 
 Credenciales obligatorias:
 
-# define IO_USERNAME "vxlentiinaa"
+define IO_USERNAME "vxlentiinaa"
 
-# define IO_KEY "xxxx"
+define IO_KEY "xxxx"
 
 - Sin esto, Arduino no puede conectarse
 
@@ -211,11 +209,11 @@ Envía datos a la nube
 
 ## Solución
 
--Código: Serial.begin(115200)
+- Código: Serial.begin(115200)
 
--Monitor serial estaba en 9600
+- Monitor serial estaba en 9600
 
--Se corrigió a 115200
+- Se corrigió a 115200
 
 <img width="1112" height="589" alt="Baudio auduino" src="https://github.com/user-attachments/assets/65ba7c18-ab59-43ae-88b0-3bdae3e7ecaf" />
 
@@ -230,7 +228,9 @@ El cableado o el contacto en la protoboard activó el sistema de Reset. Esto cor
 
 ![boton reset](https://github.com/user-attachments/assets/9651f897-9fdf-4552-9906-e6e76dd1af50)
 
+
  Datos visualizados en Adafruit IO
+
 
 <img width="1470" height="956" alt="prueba 1 grupo01" src="https://github.com/user-attachments/assets/06febfc2-47be-4c84-9614-2be0a94c92ba" />
 
@@ -259,6 +259,7 @@ Adafruit IO para ver gráficos en tiempo real con los datos enviados.
 
 <img width="1470" height="956" alt="prueba 3 grupo01" src="https://github.com/user-attachments/assets/bfdf2bf6-948d-4b50-9b00-93c9e9332339" />
 
+
 ## Reflexión del proceso
 
 
@@ -270,7 +271,7 @@ Aprendizajes técnicos:
 
 - Uso de plataformas IoT.
 
-- Comunicación entre dispositivos remotos
+- Comunicación entre dispositivos remotos.
 
 *Aprendizajes prácticos:
 
@@ -412,9 +413,9 @@ Es una especie híbrida, conformada por diversos organismos que coexisten en sim
 
 Sus obras son robots biotecnológicos que viven en entornos de ríos contaminados.
 
--La Tecnología: Utiliza celdas de combustible microbianas que generan electricidad a partir de la descomposición de materia orgánica en el agua.
+- La Tecnología: Utiliza celdas de combustible microbianas que generan electricidad a partir de la descomposición de materia orgánica en el agua.
 
--Inalámbrico/IoT: El robot se desplaza de forma autónoma buscando agua contaminada para "alimentarse". Transmite datos sobre la calidad del agua y su propia ubicación, creando un mapa vivo de la degradación ambiental. Es, literalmente, un "sensor vivo" que habita la ciudad.
+- Inalámbrico/IoT: El robot se desplaza de forma autónoma buscando agua contaminada para "alimentarse". Transmite datos sobre la calidad del agua y su propia ubicación, creando un mapa vivo de la degradación ambiental. Es, literalmente, un "sensor vivo" que habita la ciudad.
 
 
 Fotos del proyecto:
