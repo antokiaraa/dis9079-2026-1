@@ -1,13 +1,19 @@
-# sesion-04
+# sesion-04 
+
+Lunes 30 Marzo:
+
+# Tema central:
+La clase giró en torno a cómo hacer que distintos dispositivos se comuniquen entre sí de forma inalámbrica. El foco estuvo en MQTT, en el uso de Wi-Fi como medio de conexión, y en la idea de que los mensajes viajan dentro de una red siguiendo ciertas reglas.
 
 ### Topic MQTT: ###
-broker mqtt protocolo de comunicación muy liviano para que dispositivos se manden mensajes entre sí por red
+
+MQTT es un protocolo de comunicación muy liviano, pensado para que dispositivos se manden mensajes entre sí por red sin exigir demasiados recursos. Es muy útil en proyectos con microcontroladores, sensores y sistemas IoT.
 
 ### 3 partes claves ### 
- 
-1. Publisher
-2. Subscriber
-3. Broker
+
+Publisher: el dispositivo que publica o envía un mensaje
+Subscriber: el dispositivo que recibe o está suscrito a ese mensaje
+Broker: el intermediario que organiza y distribuye los mensajes
 
  ### WI FI ###
 conexión inalámbrica que permite que un dispositivo se comunique con una red sin cable
@@ -31,7 +37,41 @@ la Raspberry lo recibe y muestra algo en la OLED
 
 
 ### Referente ###
-Claude shannon theory of communication 
+
+**Claude shannon theory of communication**
+
+Se nombró a Claude Shannon como referente importante para entender la comunicación. Es una figura clave porque sentó bases de la teoría de la información, que ayuda a pensar cómo un mensaje se transmite desde una fuente hacia un destino, pasando por un canal y enfrentándose incluso a posibles interferencias o “ruido”.
+ 
+una fuente que genera información
+un medio por donde viaja
+un receptor
+y posibles problemas o ruido en el proceso
+
+## Conceptos y herramientas que aparecieron
+
+**Mosquitto** 
+También apareció la idea de tener el broker en Mosquitto, que es otra herramienta asociada a MQTT. En términos simples, sirve para levantar o alojar el broker que ordena la comunicación.
+
+**UDP**
+UDP (User Datagram Protocol) es otro protocolo, más centrado en enviar datos rápido y sin tanta verificación. Prioriza velocidad y baja latencia antes que seguridad total en la entrega. Por eso sirve en contextos donde importa mucho la rapidez. 
+
+**TigerVNC**
+TigerVNC apareció como sistema de escritorio gráfico remoto para poder visualizar o controlar la Raspberry Pi desde otro computador. 
+
+**Rosetta** 
+Se nombró Rosetta en el contexto de Apple. Me queda como una herramienta de compatibilidad que permite correr programas pensados para otra arquitectura, especialmente en computadores Mac con Apple Silicon. 
+ 
+**5 GHz**
+Se mencionó que la red de 5 GHz puede ser más rápida, pero tiene menor alcance. Entonces no siempre conviene según la distancia o el espacio.
+
+
+## OJITOOOOOOO
+
+**sudo**
+Quedó anotado que sudo es una palabra delicada porque da permisos de superusuario o administrador. La idea fue tener cuidado con usarla.
+
+**rm -rf**
+También apareció como comando peligroso, porque puede borrar archivos o directorios de manera muy agresiva. Queda como advertencia importante.
 
 **son apuntes para no perder ideas**
 
@@ -61,9 +101,6 @@ negativo gnd
 sacadito en palito luz led es igual a negativo
 
 
-
-Lunes 30 Marzo:
-
 1. Conectar Arduino a Sensor pulso.
 
    -Sensor pulso a cable rojo 5v, cable negro gnd, amarillo a0 
@@ -73,5 +110,3 @@ Lunes 30 Marzo:
    -codigo corazón LEDMATRIX_HEART_BIG y LEDMATRIX_HEART_SMALL
     
 
-
-lunes 30 marzo 2026

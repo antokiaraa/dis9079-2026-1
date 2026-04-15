@@ -4,15 +4,15 @@ integradas mas abajo
 
 ## sobre adafruit i/o
 
-Configuración de software: Tuvimos que instalar la librería de Adafruit dentro del programa Arduino IDE. Esto fue clave para poder vincular nuestra placa Arduino Uno R4 con la red WiFi y conectarla con la nube.
+Configuración de software: Tuvimos que instalar la librería de Adafruit dentro del programa Arduino IDE. Esto fue clave para poder vincular nuestra placa Arduino Uno R4 con la red WiFi y conectarla con la nube.  
 
-<img width="1554" height="334" alt="adafruit biblio" src="https://github.com/user-attachments/assets/1d9d8967-95ff-45e7-8c8c-efacbff745b1" />
+![biblioteca](imagenes/biblioteca_adafruit.png)  
 
-<img width="723" height="442" alt="image" src="https://github.com/user-attachments/assets/21964ce1-a441-45a2-8ff1-1025f7889850" />
+![cuenta](imagenes/cuenta_adafruit.png)  
 
 Armado del entorno: En la plataforma web de Adafruit IO, creamos nuestro canal de datos (llamado "prueba01") y configuramos el Dashboard. Inicialmente intentamos usar un bloque de tipo "Toggle" (un interruptor de encendido/apagado visual), pero tras varios problemas, terminamos configurando un bloque de tipo "Text" para enviar las instrucciones.
 
-<img width="1328" height="773" alt="PROCESO_DE_FEED" src="https://github.com/user-attachments/assets/f0a6e16c-a186-41c9-91ed-5e268a4ebd9e" />
+![ejemplo](imagenes/dashboards.png)  
 
 ### Dificultades encontradas
 
@@ -28,8 +28,8 @@ Conexión digital-físico: Entendí en la práctica la lógica, fue súper inter
 
 ## sobre artista, diseñadora o producto que usa electrónica o computación inalámbricas
 
-Artista/Diseñadora investigada: Sougwen Chung
-Proyecto: Drawing Operations Unit Generation (DOUG)
+Artista/Diseñadora investigada: Sougwen Chung  
+Proyecto: Drawing Operations Unit Generation (DOUG)  
 
 ### Descripción del proyecto y uso de tecnología
 
@@ -43,4 +43,12 @@ Flujo de información: Este referente me sirve mucho para entender a gran escala
 
 El diseño de la interacción: El valor de este proyecto no está en el dibujo final, sino en el diseño del sistema de comunicación entre los dispositivos. Me hace pensar en que, al trabajar con electrónica inalámbrica, el desafío real del diseño digital es lograr que esa transferencia de datos sea fluida y tenga sentido para el usuario, logrando que la interfaz entre el mundo físico y el digital sea casi imperceptible.
 
-<https://vimeo.com/138487938?fl=pl&fe=cm>
+![doug](imagenes/doug1.png)  
+
+### Bibliografía
+
+• Sougwen Chung. (s.f.). Drawing Operations Unit Generation (DOUG). Recuperado de: https://sougwen.com  
+
+• Ars Electronica. (s.f.). Sougwen Chung: Drawing Operations. Recuperado de: https://ars.electronica.art  
+
+• MIT Media Lab. (s.f.). Human-Machine Interaction and Creative Systems. Recuperado de: https://www.media.mit.edu  

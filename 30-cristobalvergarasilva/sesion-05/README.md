@@ -1,6 +1,6 @@
 # sesion-05
 
-lunes 06 abril 2026
+Lunes 06 abril 2026
 La clase de hoy fue más de investigar sobre las interacciones que queremos experimentar en nuestras solemnes, partiendo la clase logrando conectar nuestro Arduino a la nube de Adafruit IO, luego decidimos seguir investigando sobre como conectar y controlar un LED desde Arduino y de intermediario el Feed de Adafruit IO que es donde se realiza la conexion y el Dashboard que es donde se puede manipular las interacciones como apagar y encender o contar datos.
 Leímos y seguimos un tutorial de Adafruit para eso, pero no lo logramos hacer.
 

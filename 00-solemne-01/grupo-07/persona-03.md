@@ -9,7 +9,7 @@ Adafruit IO es un servicio de nube de Adafruit que permite a los usuarios conect
 Al principio, seguí las indicaciones sobre cómo crearme una cuenta en Adafruit y todo salió bien. Luego, fui a Arduino IDE para ver cómo funcionaba; instalé la biblioteca de Adafruit para intentar con el ejemplo que subieron a GitHub. Lo copié y ahí me salió el primer error: “Compilation error: 'AdafruitIO_WiFi' does not name a type” y “Compilation error: exit status 1”. Después de buscar información, descubrí que el error era que había eliminado el void setup y el void loop. Me puso muy contento que por fin me resultara algo cuando los agregué y funcionó.
 
 Pero entonces vino una segunda complicación: con el Arduino conectado, no me aparecía nada en Port (puerto). Para descartar fallos, primero revisé si tenía instalada la última versión del driver y luego cerré Arduino IDE para probar si no lo reconocía por haberlo conectado con el programa ya abierto (aunque no tenía nada que ver). Después de "intrusear" todos los botones del programa y revisar de nuevo lo instalado, decidí preguntarle a ChatGPT. Estaba algo desconfiado porque no pensé que me ayudaría, pero me dijo que podía deberse a que el cable que estaba usando era solo de carga y no para transferencia de datos. Efectivamente, estaba ocupando el cable de mi celular. Mañana conseguiré otro para descartar esa opción, que me hace mucho sentido.
-Efectivamente era el cable, logre correr el codigo y encender las luces de el Arduino
+Efectivamente era el cable, logre correr el código y encender las luces del Arduino.
 
 ![runway](./imagenes/puerto.png)
 
@@ -24,7 +24,7 @@ vi un sitio de tutoriales en la pagina de adafruit, segui las indicaciones y aun
 
 ![runway](./imagenes/arduino.png)
 
-probando como prender el led desde adafruit, "brickie" el arduino y Camila nos enseño a solucionarlo y nos ayudo siguiendo el tutorial que habia mandado, conectando un cable con doble hembra al arduino
+Probando como prender el led desde adafruit, "brickie" el Arduino y Camila nos enseñó a solucionarlo y nos ayudó siguiendo el tutorial que había mandado, conectando un cable con doble hembra al Arduino.
 
 ## sobre artista, diseñadora o producto que usa electrónica o computación inalámbricas
 

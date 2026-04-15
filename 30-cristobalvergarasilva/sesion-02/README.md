@@ -48,4 +48,4 @@ Esta clase pasamos hartos conceptos clave de la programación.
 
 >Donde vive tu computador en el internet, es un lugar al que los datos saben donde llegar.
 
-### primera solemne, conectar un Arduino y un Raspberrypie
+### Primera solemne, conectar un Arduino y un Raspberrypie

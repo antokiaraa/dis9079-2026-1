@@ -10,7 +10,7 @@ investigaciones individuales
 
 Dentro de **Adafruit IO**, un **dashboard** es el panel visual donde se ve y controla un proyecto desde el navegador. Ahí puedes poner bloques como gráficos, botones, sliders, indicadores o medidores para observar lo que está pasando.
 
-Un **feed** es el canal donde se guarda una variable o flujo de datos. almacenan los datos y metadatos enviados a IO. osea el sensor de pulso, podría tener un feed llamado pulsometro donde se van guardando los valores BPM luego ese feed se conecta a un gráfico o indicador dentro del dashboard para poder verlo en tiempo real.
+Un **feed** es el canal donde se guarda una variable o flujo de datos. Se almacenan los datos y metadatos enviados a IO. o sea el sensor de pulso, podría tener un feed llamado pulsómetro donde se van guardando los valores BPM luego ese feed se conecta a un gráfico o indicador dentro del dashboard para poder verlo en tiempo real.
 
 `los feeds son el núcleo del sistema y que los bloques del dashboard se enlazan a uno o más feeds.`
 
@@ -35,7 +35,7 @@ el dashboard mira esa cajita y muestra lo que hay dentro.
 - **archivo config.h** → guarda claves, usuario y red
 - **THROTTLE WARNING** → cuenta que alcanzó el límite de velocidad de envío de datos en Adafruit IO
 
-algunos apuntes  
+## algunos apuntes  
 
 pulsometro **Threshold** → qué valor de señal voy a considerar que esto ya cuenta como latido // subir si sigue detectando sin dedo el bpm  
 **void setup()** → Sirve para preparar todo antes de que empiece el programa principal.
@@ -94,21 +94,29 @@ También quería rescatar que en la entrevista ella habla de tener que permanece
 Tiene formación tanto en ingeniería como en diseño: estudió Mechanical Engineering en The Cooper Union y luego hizo un MFA en 3D Design en Cranbrook Academy of Art.
 
 Bibliografía investigación artista: 
-https://www.vice.com/es/article/carla-diana-robots/ 
+https://www.vice.com/es/article/carla-diana-robots/   
 https://www.carladiana.com/
 
 Apuntes y proceso de trabajo:
 
-Al comienzo, este proceso fue para nosotras una forma muy concreta de entender que programar no consiste solo en que algo funcione o no funcione, sino en aprender a convivir con la prueba, el error, la espera y la frustración. Primero partimos usando el codigo.ino de contador que había mandado Aron, porque en clase nos había funcionado, aunque todavía no lo habíamos probado realmente con nuestra propia cuenta. Ahí apareció una de las primeras lecciones importantes del proceso: algo tan pequeño como cambiar un feed o crear un dashboard propio ya podía modificar completamente el resultado. Cuando hicimos el dashboard prueba1, con el feed mensaje, al inicio nada funcionó y pensamos que habíamos hecho algo mal, pero después de borrar, rehacer y volver a probar, terminó funcionando.
+Al comienzo, este proceso fue para nosotras una forma muy concreta de entender que programar no consiste solo en que algo funcione o no funcione, sino en aprender a convivir con la prueba, el error, la espera y la frustración. Primero partimos usando el codigo.ino de contador que había mandado Aron, porque en clase nos había funcionado, aunque todavía no lo habíamos probado realmente con nuestra propia cuenta. Ahí apareció una de las primeras lecciones importantes del proceso: algo tan pequeño como cambiar un feed o crear un dashboard propio ya podía modificar completamente el resultado. Cuando hicimos el dashboard prueba1, con el feed mensaje, al inicio nada funcionó y pensamos que habíamos hecho algo mal, pero después de borrar, rehacer y volver a probar, terminó funcionando. 
+
+ ![contador](./imagenes/contador.gif) 
 
 De hecho, una parte importante del aprendizaje fue darnos cuenta de que la conexión con Adafruit no era inmediata y que a veces había que esperar dos o tres minutos antes de asumir que todo estaba fallando.
 
 Cuando pasamos al pulsómetro, el proceso se volvió aún más interesante porque dejó de ser solo repetir un código y pasó a ser una verdadera búsqueda. Ya no queríamos que el sensor entregara simplemente BPM, sino que queríamos transformarlo en otra cosa: que la actividad del cuerpo pudiera activar un mensaje, en este caso, “amistad es amigo”. Ahí empezamos a entender que trabajar con componentes externos implicaba no solo conectar cables, sino también comprender que cada elemento trae su propia lógica y su propio lenguaje dentro del código, como ocurrió con la librería #include <PulseSensorPlayground.h>. También nos enfrentamos a algo muy real del aprendizaje técnico: hay muchísimos tutoriales, pero casi nunca existe uno que responda exactamente a lo que una quiere hacer. Por eso tuvimos que mirar referencias, mezclar códigos, intentar unir partes que parecían servirnos y, en medio de eso, pedir ayuda para ordenar lo que no lográbamos resolver solas.
 
-Con el pulsómetro también apareció un problema que fue muy revelador: el sensor era demasiado sensible y mandaba demasiados mensajes en muy poco tiempo, lo que terminaba colapsando Adafruit. Eso nos obligó a cambiar la lógica inicial y dejar de pensar en el dato exacto del BPM para empezar a pensar en la presencia, en la detección de actividad y en el tiempo de espera. Ahí surgió la idea de usar const unsigned long tiempoSinLatido = 3000;, para que el mensaje se enviara solo después de cierto tiempo sin actividad.
+   ![pulsometro](./imagenes/pulsometro.jpg)   
+    
+Con el pulsómetro también apareció un problema que fue muy revelador: el sensor era demasiado sensible y mandaba demasiados mensajes en muy poco tiempo, lo que terminaba colapsando Adafruit. Eso nos obligó a cambiar la lógica inicial y dejar de pensar en el dato exacto del BPM para empezar a pensar en la presencia, en la detección de actividad y en el tiempo de espera. Ahí surgió la idea de usar const unsigned long tiempoSinLatido = 3000;, para que el mensaje se enviara solo después de cierto tiempo sin actividad. 
 
-Después vino la pantalla OLED, y con ella otra capa de complejidad que también fue muy formativa. A diferencia del pulsómetro, aquí primero hubo que entender cómo se conectaba físicamente, buscar tutoriales, conseguir los cables correctos y descargar nuevas librerías. Ese paso fue importante porque nos hizo ver que cada componente nuevo obliga a reaprender una parte del proceso, incluso antes de programar. Luego quisimos que la pantalla mostrara un corazón cada cierto tiempo y que, al aparecer ese corazón, también se enviara el mensaje “amistad es amigo” al dashboard.
+ ![pulsometro](./imagenes/pulsometro.png)   
+
+Después vino la pantalla OLED, y con ella otra capa de complejidad que también fue muy formativa. A diferencia del pulsómetro, aquí primero hubo que entender cómo se conectaba físicamente, buscar tutoriales, conseguir los cables correctos y descargar nuevas librerías. Ese paso fue importante porque nos hizo ver que cada componente nuevo obliga a reaprender una parte del proceso, incluso antes de programar. Luego quisimos que la pantalla mostrara un corazón cada cierto tiempo y que, al aparecer ese corazón, también se enviara el mensaje “amistad es amigo” al dashboard. 
+
+  ![oled](./imagenes/oled.jpg)  
 
 Más adelante, cuando intentamos que el sistema funcionara a distancia entre dos casas, el proyecto dejó de sentirse como una suma de ejercicios separados y empezó a tomar forma como una experiencia más completa. Queríamos que un Arduino enviara los mensajes “amistad es amigo” y “te extraño amigo” según el estado de un LED, y que eso pudiera verse en otro lugar, primero en un dashboard y luego en una pantalla OLED conectada a otro Arduino. En esa parte recordamos cosas muy básicas, como la lógica de false y true, y fue interesante ver cómo conceptos tan iniciales terminaban teniendo un rol real dentro del proyecto. También fue la parte más larga y más frustrante, porque probamos muchas cosas que no funcionaron: cambiamos feeds, revisamos configuraciones, intentamos conectarnos desde un dashboard al otro lado, esperamos varios minutos, pensamos que el problema podía ser la distancia, e insistimos incluso cuando parecía no haber avance. Pero justamente por eso, cuando cambiamos la dirección del proceso, hicimos que el Arduino 01 se conectara al dashboard correcto mediante mensaje2, y luego logramos que el Arduino 02 recibiera ese mensaje para imprimirlo en la OLED, la sensación fue completamente distinta. Ya no era solo alivio por haberlo logrado, sino la impresión de haber entendido algo que antes parecía demasiado lejano.
 
-
+ ![dashboardoled](./imagenes/dashboardoled.gif) 

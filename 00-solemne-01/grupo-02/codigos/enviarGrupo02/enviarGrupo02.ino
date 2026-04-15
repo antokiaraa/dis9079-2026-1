@@ -1,88 +1,65 @@
-// Adafruit IO Publish Example
-//
-// Adafruit invests time and resources providing this open source code.
-// Please support Adafruit and open source hardware by purchasing
-// products from Adafruit!
-//
-// Written by Todd Treece for Adafruit Industries
-// Copyright (c) 2016 Adafruit Industries
-// Licensed under the MIT license.
-//
-// All text above must be included in any redistribution.
-
-// ejemplo para enviar / publish
-// por montoyamoraga
-// para disenoUDP
-// basado en
-// Adafruit IO Publish Example
-
-// incluir archivo config.h
-// hacer las modificaciones de este archivo
-// NO subir a github
 #include "config.h"
 
-// esta variable entera
-// sera un contador que aumenta
-// durante el funcionamiento del software
-int contador = 0;
+const int LED_PIN = LED_BUILTIN;   // si usas un LED externo, cambia este pin
+const unsigned long INTERVALO = 5000;  // 5 segundos
 
-// definir una variable que se llame nombreFeed
-// que tenga un cierto valor
-// mantener las doble comillas, cambiar grupoXX segun tu nombre de grupo
-AdafruitIO_Feed *nombreFeed = io.feed("grupoXX");
+AdafruitIO_Feed *mensajeFeed = io.feed("mensaje");
+
+bool estadoLed = false;  // empieza apagado
+unsigned long ultimoCambio = 0;
 
 void setup() {
-
-  // prender la conexion serial
-  // ojo con la velocidad de 115200 baud
-  // cuando abras el monitor serial debes configurarlo
-  // a este numero, porque el standard de fabrica es 9600 baud
   Serial.begin(115200);
+  while (!Serial);
 
-  // estas lineas pausan el codigo
-  // hasta que prendas el monitor serial
-  // la lupita arriba a la derecha en Arduino IDE
-  while (!Serial)
-    ;
+  pinMode(LED_PIN, OUTPUT);
+  digitalWrite(LED_PIN, LOW);
 
-  // imprimir en consola
-  Serial.print("conectando a Adafruit IO");
-
-  // conectarse a io.adafruit.com
+  Serial.println("Conectando a Adafruit IO...");
   io.connect();
 
-  // esperar la conexion
   while (io.status() < AIO_CONNECTED) {
-    // imprimir un punto cada medio segundo
-    // mientras se conecta
-    Serial.print(".");
-    delay(500);
+    Serial.println(io.statusText());
+    delay(1000);
   }
 
-  // demostrar que logramos conexion
-  Serial.println();
-  Serial.println(io.statusText());
+  Serial.println("Adafruit IO connected.");
+
+  // mandar estado inicial
+  if (mensajeFeed->save("te extraño amigo")) {
+    Serial.println("Mensaje inicial enviado: te extraño amigo");
+  } else {
+    Serial.println("Error al enviar mensaje inicial");
+  }
+
+  ultimoCambio = millis();
 }
 
 void loop() {
-
-  // esta linea es necesaria
-  // al principio de loop()
-  // para mantener la conexion
-  // y procesar datos que lleguen
   io.run();
 
-  // enviar el contador a Adafruit IO
-  // primero mostrar en monitor serial
-  Serial.print("enviando -> " + String(contador));
-  // despues enviar a la nube
-  nombreFeed->save(contador);
+  unsigned long ahora = millis();
 
-  // incrementar el contador en 1
-  contador = contador + 1;
+  if (ahora - ultimoCambio >= INTERVALO) {
+    ultimoCambio = ahora;
 
-  // Adafruit IO tiene una velocidad limitada
-  // de escritura / publishing
-  // usamos delay para pausar el codigo 3 segundos
-  delay(3000);
+    // cambiar estado del LED
+    estadoLed = !estadoLed;
+    digitalWrite(LED_PIN, estadoLed ? HIGH : LOW);
+
+    // enviar mensaje segun estado
+    if (estadoLed) {
+      if (mensajeFeed->save("amistad es amigo")) {
+        Serial.println("LED encendido -> amistad es amigo");
+      } else {
+        Serial.println("Error al enviar: amistad es amigo");
+      }
+    } else {
+      if (mensajeFeed->save("te extraño amigo")) {
+        Serial.println("LED apagado -> te extraño amigo");
+      } else {
+        Serial.println("Error al enviar: te extraño amigo");
+      }
+    }
+  }
 }

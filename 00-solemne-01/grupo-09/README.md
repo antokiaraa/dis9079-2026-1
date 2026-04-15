@@ -28,35 +28,45 @@ Por esta razón, se optó por trabajar con el envío y recepción de texto. A tr
 
 Creamos diferentes feeds y dashboards en Adafruit IO, en donde, a base de pruebas y errores, logramos que el Arduino pudiera recibir un mensaje.
 
+El desarrollo del código se basó en ejemplos y documentación oficial de Adafruit IO y Arduino, los cuales fueron adaptados según los requerimientos del proyecto.  
+
 ![Adafruit](imagenes/feeds_adafruit.png)
 
 ![Adafruit](imagenes/dashboards_adafruit.png.png)
 
 ## proceso
 
-El día lunes 06 fuimos los últimos en lograr conectarnos a Adafruit. Después de varios intentos, finalmente lo conseguimos. Inicialmente tuvimos problemas con la velocidad de conexión, lo que nos impedía visualizar correctamente en qué estado se encontraba el proceso. Con la ayuda de Aaron, decidimos cerrar Arduino y volver a abrirlo. Tras hacer esto, el sistema funcionó correctamente, aunque demoró un poco en cargar.
+El día lunes 06 comenzamos a trabajar en la conexión del sistema con Adafruit IO. Para esto, utilizamos una placa Arduino Uno R4, conectada a un computador mediante un cable USB tipo A-B, el cual permite tanto la alimentación como la comunicación de datos entre el Arduino y el computador. Fuimos de los últimos en lograr establecer la conexión, ya que al principio tuvimos varios problemas relacionados con la velocidad de internet, lo que dificultaba entender en qué parte del proceso estábamos fallando. El sistema quedaba cargando por mucho tiempo y no mostraba información clara.
 
-Para continuar con la solemne, intentamos utilizar un toggle en Adafruit, el cual, al encenderse y apagarse, debía controlar los LED del Arduino. Sin embargo, a pesar de modificar el código en múltiples ocasiones, no logramos que funcionara. Estuvimos aproximadamente dos horas intentando que el Arduino recibiera la información, pero no obtuvimos resultados.
+Con la ayuda de Aaron, probamos cerrar el programa Arduino IDE y volver a abrirlo, lo que permitió reiniciar la conexión. Después de esto, el sistema logró conectarse correctamente, aunque con cierta demora, lo que nos hizo entender que la estabilidad de la red era un factor importante en el funcionamiento del proyecto.
+
+Una vez lograda la conexión, comenzamos a trabajar con el Arduino como receptor de datos enviados desde Adafruit IO. Intentamos implementar un sistema de control utilizando un bloque tipo “toggle” en la plataforma. La idea era que, al cambiar su estado (encendido/apagado), el Arduino recibiera el dato y controlara el LED integrado de la placa. Sin embargo, a pesar de modificar el código en varias ocasiones y revisar la configuración del feed, no logramos que el Arduino respondiera a estos cambios.  
 
 ![Biblioteca Arduino](imagenes/proceso_coneccion_adafruit.png)
 
-Además, cometimos algunos errores en el código. Por ejemplo, en la contraseña del WiFi habíamos escrito mal la última letra, lo que impedía la conexión. Debido a esto, el sistema quedaba intentando conectarse sin éxito y solo mostraba puntos en la carga.
+Durante este proceso, identificamos algunos errores en nuestra configuración. Uno de los más relevantes fue que la contraseña del WiFi estaba mal escrita, lo que impedía completamente la conexión. Este error provocaba que el Arduino quedara en un ciclo de intento de conexión, mostrando solo puntos en el monitor serial. Al corregir este detalle, logramos avanzar en la conexión.  
 
 ![Biblioteca Arduino](imagenes/2_intento_deconeccion.png)
 
-Al final, buscamos otra forma de enviar y recibir información. Para esto, en Adafruit agregamos un nuevo bloque de tipo “text”.
+Después de aproximadamente dos horas intentando hacer funcionar el control del LED sin éxito, decidimos cambiar de estrategia. En lugar de trabajar con el toggle, optamos por utilizar un bloque de tipo “text” en Adafruit IO, ya que permitía enviar mensajes de forma más directa.  
 
 ![Adafruit](imagenes/bloque_adafruit_text.png)
 
-A partir de esto, trabajamos con otro código que fuimos ajustando hasta que finalmente logramos recibir datos en el Arduino. Marlen se encargó de enviar la información desde Adafruit y Marcela de recibirla desde el Arduino. Sin embargo, solo logramos recibir un mensaje, “ON”. Intentamos enviar también un “OFF”, pero este nunca llegó. Aun así, seguiremos ajustando el código, ya que estamos muy contentos de haber logrado al menos la recepción de un dato.
+A partir de este cambio, adaptamos el código para que el Arduino pudiera recibir y mostrar mensajes enviados desde la plataforma. En esta etapa, Marlen se encargó de enviar los datos desde Adafruit IO, mientras que Marcela trabajó en la recepción desde el Arduino conectado al computador mediante el cable USB. Finalmente, logramos recibir correctamente un mensaje, específicamente “ON”, el cual fue visualizado en el monitor serial.
+
+Intentamos replicar el proceso enviando otros mensajes como “OFF”, pero estos no fueron recibidos correctamente. A pesar de esto, consideramos que el resultado fue positivo, ya que se logró establecer una comunicación básica entre la plataforma y el Arduino.  
 
 ![Arduino](imagenes/arduino_mensaje_recibido.png)
 
 <https://github.com/user-attachments/assets/cc8b1825-d7d3-46d0-aa7d-2ac7c3fd2a4d>
 
-También queremos mencionar que, al parecer, debido al internet, muchas veces no logramos conectarnos a Adafruit y el sistema quedaba cargando. En esos casos teníamos que desconectar y volver a conectar el Arduino, además de tener paciencia hasta que se reconectara nuevamente. Al principio nos asustamos, ya que estábamos usando el mismo código que antes sí funcionaba, pero dejó de conectar. Sin embargo, al final nos dimos cuenta de que el problema probablemente era solo la conexión a internet.
+Finalmente, observamos que en varias ocasiones la conexión fallaba debido a problemas de internet. En esos casos, era necesario desconectar y volver a conectar el Arduino, además de esperar a que el sistema lograra reconectarse. Esto nos permitió concluir que la conexión a la red es un factor crítico para el correcto funcionamiento de este tipo de proyectos. 
 
 ### código para recibir
+
+Para la recepción de datos se utilizó una placa Arduino Uno R4, conectada a un computador mediante un cable USB tipo A-B, el cual permite tanto la alimentación como la comunicación de datos entre el Arduino y el computador.
+
+El Arduino recibe los datos enviados desde Adafruit IO a través de un feed, los cuales son procesados y mostrados en el monitor serial.
 
 ```cpp
 // Librería para conectar Arduino a Adafruit IO vía WiFi

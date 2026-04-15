@@ -4,98 +4,175 @@ investigaciones individuales
 
 ## sobre adafruit i/o
 
-### Proceso de instalación
+En este proceso de aprendizaje trabajé con la plataforma Adafruit IO, una plataforma en la nube orientada al Internet de las Cosas (IoT), que permite conectar dispositivos físicos a internet para enviar, recibir y visualizar datos en tiempo real.
 
-Primero investigué qué era Adafruit IO, y es una plataforma que permite conectar dispositivos a internet para enviar y recibir datos.
+Mi objetivo fue aprender a conectar el Arduino Uno R4 WiFi a internet para enviar datos y controlarlos a través de dashboards.
 
-Lo primero que hice fue crear una cuenta, después de eso entré a IO, donde aparecen los feeds y dashboards.
+### Proceso de instalación y configuración
 
-Luego usé el Arduino para programar y tuve que instalar las librerías necesarias para poder conectar el Arduino con Adafruit IO.
+Primero investigué qué era Adafruit IO y cómo funcionaba. Luego creé una cuenta y exploré la plataforma, donde aparecen los feeds y dashboards.
 
-Después configuré el código agregando mi usuario, la key y la red WiFi. Estos datos son importantes porque permiten que el dispositivo se conecte a la plataforma :)
+![foto](./imagenes/anaysadafruit.png)
 
-- Instalar Arduino IDE
-- Seleccionar placa: Arduino Uno R4 WiFi
-- Abrir “Administrar bibliotecas”
+Después instalé el Arduino IDE, que es el programa que permite escribir y cargar códigos al Arduino.
+
+### Pasos principales
+
+- Seleccionar la placa: Arduino Uno R4 WiFi
+- Abrir el administrador de bibliotecas
   
-### Instalar
-
+Instalar bibliotecas:
 - Adafruit MQTT Library
 - ArduinoHTTPClient
-- Adafruit IO Arduino (última versión)
+- Adafruit IO Arduino
   
-### Configurar en el código
+Luego se configura el código agregando:
+- Nombre y contraseña del WiFi
+- Usuario de Adafruit IO
+- AIO Key de Adafruit IO
+  
+Estos datos son importantes porque permiten que el dispositivo se conecte a la plataforma :)
 
-- WiFi (nombre y contraseña)
-- Username
-- Key de Adafruit IO
+Finalmente:
+
+- Conecté el Arduino al computador
+- Seleccioné el puerto correcto
+- Subí el código
+
+### Funcionamiento del sistema
+
+El sistema funciona como una conexión entre el dispositivo físico y la plataforma digital.
+
+Primero, el Arduino se conecta a una red WiFi, luego se autentica en Adafruit IO mediante el usuario y la AIO Key. Una vez conectado, se pueden enviar y recibir datos a través de los feeds.
+
+Estos datos se visualizan en dashboards en tiempo real, lo que permite observar y manejar el sistema a distancia.
+
+### Configuración de conexión y credenciales
+
+Para que la conexión funcione, es necesario ingresar en el código los siguientes datos:
+
+- Usuario de Adafruit IO
+- AIO Key de Adafruit IO
+- Nombre de la red WiFi 
+- Contraseña de la red WiFi
   
-- Conectar Arduino al PC
-- Seleccionar puerto
-- Subir código
+Sin esta información, el dispositivo no puede conectarse ni enviar datos.
+
+También es importante manejar estos datos con cuidado y no compartirlos públicamente!!!
+
+### Uso de bibliotecas y comunicación
+
+Con las bibliotecas utilizadas es posible:
+
+- Conectar el dispositivo a internet
+- Enviar datos a la nube
+- Recibir información desde la plataforma
+- Mantener la comunicación activa
   
+Aunque internamente se utiliza el protocolo MQTT, este proceso se maneja de forma automática mediante las bibliotecas, lo que facilita el desarrollo.
+
+### Funciones principales
+
+Dentro del código se utilizan distintas funciones de la biblioteca de Adafruit IO que permiten gestionar la conexión y el envío de datos:
+
+ `io.connect()` → establece la conexión inicial con Adafruit IO
+
+`io.run()` → mantiene la conexión activa y gestiona la comunicación en tiempo real
+
+`io.feed()` → define el canal por donde se envían los datos
+
+`feed->save(valor)` → envía la información desde el dispositivo hacia la nube
+
 ### Conceptos básicos
 
 ### Feeds
 
-Entendí que los feeds son muy importantes en Adafruit IO. Son como espacios donde se guardan los datos que envía el dispositivo.
+Los feeds son espacios donde se almacenan los datos que envía el dispositivo, funcionando como contenedores de información.
 
 ### Datos
 
-Son la información que quiero guardar, como temperatura, humedad o si algo está prendido o apagado, etc.
+Son la información que se quiere guardar, como temperatura, humedad, encendido y apagado, etc.
 
 ### Dashboards
 
-Los dashboards son donde puedo ver los datos y también controlar cosas.
+Los dashboards son paneles donde se pueden visualizar y controlar los datos.
 
-Feed = guarda datos
+- Feed: almacena datos
+- Dashboard: visualiza datos
+- WiFi: conecta el sistema
 
-Dashboard = muestra datos
+### Aprendizajes y dificultades
 
-WiFi = conecta todo
+Aún me cuesta entender los errores del código porque no son claros para mí. También fue un poco confuso comprender cómo se conectan el Arduino, internet y la plataforma.
 
-![foto](./imagenes/anaysadafruit.png)
+Con la práctica y el apoyo de tutoriales, logré entender mejor el proceso.
 
-![foto](./imagenes/arduinoadafruit.png)
-
-### prendizajes y dificultades
-
-Me cuesta entender los errores del código porque no son claros para mi aún y también fue difícil al inicio entender cómo se conectan Arduino, internet y la plataforma.
-
-Aprendí a enviar datos en tiempo real por WiFi y que es importantisimo configurar bien los datos para que todo funcione.
-
-También me guíe de este tutorial: <https://mkelectronica.com/?s=Aprende+a+utilizar+la+plataforma+Adafruit+IO>
+Aprendí a enviar datos en tiempo real por WiFi y comprendí que es muy importante configurar correctamente los datos para que todo funcione.
 
 ## sobre artista, diseñadora o producto que usa electrónica o computación inalámbricas
 
-# Incertitudes" by Ying Gao
+### Incertitudes – Ying Gao
 
-Ying Gao, diseñadora de moda afincada en Montreal y profesora en la Universidad de Quebec en Montreal, exdirectora del Programa de Moda, Joyería y Diseño de Accesorios en HEAD-Genève, Ying Gao ha alcanzado distinción personal gracias a sus numerosos proyectos creativos presentados en más de cien exposiciones alrededor del mundo. Su variada obra creativa ha tenido cobertura mediática internacional: Time, Vogue, The New York Times, Dazed and Confused, Interni, ARTE. Es una de las "Fab 40: Canadá" seleccionadas por la revista Wallpaper.
+En esta investigación analizo la obra Incertitudes de Ying Gao, una diseñadora que trabaja en la intersección entre moda, tecnología y arte interactivo. Su trabajo se caracteriza por integrar dispositivos electrónicos en prendas de vestir, generando una relación directa entre el cuerpo, el entorno y los sistemas tecnológicos.
 
-Ying Gao cuestiona nuestras suposiciones sobre la ropa combinando diseño de moda, diseño de producto y diseño de medios. Explora la construcción de la prenda, inspirándose en las transformaciones del entorno social y urbano. Al ver el diseño como un medio, Ying Gao examina tanto el estatus del individuo, cuyos límites físicos se ven alterados por interferencias externas, como la función de la vestimenta como espacio de transición. Su obra da testimonio de la profunda mutación del mundo en el que vivimos y lleva consigo una dimensión crítica radical que trasciende la experimentación tecnológica.
+### Sobre la diseñadora
 
-“Este proyecto se basa en el concepto de incertidumbre. Activadas por la voz del espectador, las prendas reaccionan al sonido poniendo en movimiento los alfileres. A través de este movimiento, es como si la ropa entablara una conversación llena de incomprensión e incertidumbre con el espectador”
+Ying Gao es una diseñadora de moda radicada en Montreal y profesora en la Université du Québec à Montréal, con una trayectoria destacada en el diseño contemporáneo. Según su página web, “Ying Gao ha alcanzado distinción personal gracias a sus numerosos proyectos creativos presentados en más de cien exposiciones alrededor del mundo. Su variada obra creativa ha tenido cobertura mediática internacional…” (Gao, s.f.). Además, su trabajo propone una reflexión sobre la moda y su relación con el entorno, ya que “Ying Gao cuestiona nuestras suposiciones sobre la ropa combinando diseño de moda, diseño de producto y diseño de medios…” (Gao, s.f.).
 
-"Consiste en tela blanca y plateada cubierta con alfileres de modista, que sobresalen hacia fuera de la fachada textil. Mediante una colaboración de medios y tecnologías, plástico PVDF, alfileres de modista y dispositivos electrónicos, los accesorios metálicos interactúan y responden al ruido en su entorno, activado por la voz del espectador. Su movimiento fluido genera un flujo ondulatorio, contrayendo y expandiendo todo el objeto portátil"
+### Obra
+
+La obra Incertitudes (2013) consiste en una serie de prendas interactivas que reaccionan al sonido del espectador.
+
+Como señala la diseñadora: “Este proyecto se basa en el concepto de incertidumbre. Activadas por la voz del espectador, las prendas reaccionan al sonido poniendo en movimiento los alfileres. A través de este movimiento, es como si la ropa entablara una conversación llena de incomprensión e incertidumbre con el espectador” (Gao, 2013).
+Además: “Consiste en tela blanca y plateada cubierta con alfileres de modista, que sobresalen hacia fuera de la fachada textil… Su movimiento fluido genera un flujo ondulatorio, contrayendo y expandiendo todo el objeto portátil” (Azzarello, 2013).
 
 ![foto](./imagenes/investigacion1.jpg)
 
 ![foto](./imagenes/investigacion2.jpg)
 
-### Video del proyecto: <https://vimeo.com/73585344>
+- Video de la obra: <https://vimeo.com/73585344>
 
-Elegí a Ying Gao y su obra Incertitudes porque me gusta mucho lo que quiere representar, la inspiración que tiene y la forma en que lo transmite, cambia muchísimo las ideas que se tiene del vestuario, es una mezcla de cuerpo, máquinas y diseño.
+### Funcionamiento e interacción
 
-Me gusta como tiene una crítica más profunda y como muestra cómo hoy todo es rápido e inestable, y eso lo refleja la ropa que siempre está cambiando pero no sabes cómo va a reaccionar, igual que en la vida donde no todo se puede controlar.
+El funcionamiento de la obra se basa en captar el sonido a través de la voz del espectador. Ese sonido es detectado por sensores y luego procesado por un sistema electrónico que activa el movimiento de los alfileres. Así, la prenda genera una respuesta en tiempo real y deja de ser algo estático, ya que interactúa directamente con lo que ocurre a su alrededor.
 
-Recomiendo mucho ver sus otras obras :) ( <https://yinggao.ca/> )
+### Análisis conceptual
 
-Tambien me pillé unas bandas por spotify que me parecieron interesantes:
+La obra se basa en el concepto de “incertidumbre”, lo que se refleja en su comportamiento cambiante e impredecible. La prenda no tiene una reacción fija, sino que depende de factores externos, lo que genera una interacción variable con el espectador.
 
-Holly Herndon - <https://open.spotify.com/intl-es/artist/2c9yn5DJQd5es7YMY92ikZ?si=yO9admdrQYydrW3eNt7LrQ>
+Más allá de lo técnico, esto se puede interpretar como una representación de cómo funcionan muchas situaciones en la actualidad, donde no todo se puede controlar y las respuestas no son siempre predecibles.
 
+### Relación con tecnología y diseño
+
+El trabajo de Ying Gao mezcla distintas áreas como el diseño de moda, la electrónica, la interacción y los medios digitales. Esto muestra cómo la tecnología se puede integrar al diseño de forma creativa, no solo para que algo funcione, sino también para generar experiencias y transmitir ideas.
+
+### Reflexión personal
+
+Elegí a Ying Gao y su obra Incertitudes porque me gusta mucho lo que quiere representar, la inspiración que tiene y la forma en que lo transmite. Cambia bastante la idea tradicional del vestuario, ya que mezcla cuerpo, máquinas y diseño.
+
+Me gusta cómo tiene una crítica más profunda y cómo muestra que hoy todo es rápido e inestable, reflejándolo en la ropa, que siempre está cambiando y no se sabe cómo va a reaccionar, igual que en la vida, donde no todo se puede controlar.
+
+Recomiendo mucho ver sus otras obras :)  https://yinggao.ca/
+
+### Referentes extra
+
+También encontré artistas en Spotify que me parecieron interesantes:
+
+- Holly Herndon – <https://open.spotify.com/intl-es/artist/2c9yn5DJQd5es7YMY92ikZ>
+  
 Usa una IA creada por ella y su equipo para hacer música, donde la voz y los datos se transmiten y procesan digitalmente.
-
-Ryoji Ikeda - <https://open.spotify.com/intl-es/artist/5y835stYdAVOoNOq5EBMxz?si=DmoOmGFzSN2j0gOLu-MzYQ>
-
+- Ryoji Ikeda – <https://open.spotify.com/intl-es/artist/5y835stYdAVOoNOq5EBMxz>
+  
 Hace música con datos y señales digitales, mostrando cómo la información se transmite y se convierte en sonido.
+
+### Bibliografía
+
+- Azzarello, N. (2013). Ying Gao’s sound activated kinetic garments: Incertitudes. Designboom. <https://www.designboom.com/design/ying-gaos-sound-activated-kinetic-garments-incertitudes/>
+
+- Gao, Y. (2013). Incertitudes. <https://vimeo.com/73585344>
+
+- Gao, Y. (s.f.). Incertitudes (Interactive project). <https://yinggao.ca/interactifs/incertitudes/>
+
+- Gao, Y. (s.f.). Profile. <https://yinggao.ca/info/profile/>
+
+- MKElectronica. (s.f.). Aprende a utilizar la plataforma Adafruit IO. <https://mkelectronica.com/?s=Aprende+a+utilizar+la+plataforma+Adafruit+IO>

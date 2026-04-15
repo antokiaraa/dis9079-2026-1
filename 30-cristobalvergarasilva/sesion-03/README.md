@@ -3,11 +3,13 @@
 lunes 23 marzo 2026
 
 ### Raspberry Pi
->Empresa de computadores fundada en el 2009, hacía computadores baratos para la época, antecesores de los Personal Computer (pc), los mainframe computers, que son computadores gigantes que la gente tenía acceso a conectarse a ellos.
+Empresa de computadores fundada en el 2009, hacía computadores baratos para la época, antecesores de los Personal Computer (pc), los mainframe computers, que son computadores gigantes que la gente tenía acceso a conectarse a ellos.
 
->Raspberry Pi se diferencian a los Arduinos porque estos son microcontroladores, que sirven para cosas menos complejas y Rasberry Pi hace computadores y se conectan a WIFI, HDMI, USB-C, aunque en la actualidad ambas empresas hacen ambas cosas.
+Raspberry Pi se diferencian a los Arduinos porque estos son microcontroladores, que sirven para cosas menos complejas y Rasberry Pi hace computadores y se conectan a WIFI, HDMI, USB-C, aunque en la actualidad ambas empresas hacen ambas cosas.
 
->estos microcomputadores sirven como bases sólidas y en el curso vamos a ocupar el ### Raspberry Pi Pico 2 W, versión inalámbrica del microcontrolador Pico 2.
+Estos microcomputadores sirven como bases sólidas y en el curso vamos a ocupar el Raspberry Pi Pico 2 W, versión inalámbrica del microcontrolador Pico 2.
+
+![runway](./imagenes/MCI10561.webp)
 
 ### Plataforma Bela
 >Es un sistema de Hardware y Software de código abierto diseñado para crear proyectos interactivos en tiempo real con sensores y sonido. Se utiliza en música electrónica, arte digital y hacen chips adaptados a solo hacer audio.
@@ -17,7 +19,8 @@ lunes 23 marzo 2026
 ### Visual Studio Code, 
 >Editor de código gratuito, ligero y multiplataforma creado por Microsoft.
 
-## protocolos 
+## Protocolos 
+
 ### SPI
 >Protocolo que sirve para conectar microcontroladores con periféricos como sensores, memorias y pantallas. Se caracteriza por su alta velocidad y baja complejidad.
 
