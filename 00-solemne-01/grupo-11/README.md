@@ -30,7 +30,7 @@ Por eso le pedimos ayuda a Chat GPT para modificar el código, para que el led r
 
 Y finalmente resultó, el código funcionó y logramos prender y apagar el led desde el iPad, incluso a distancia. (ദ്ദി˙ᗜ˙)
 
-https://github.com/user-attachments/assets/60f147d6-ef7a-4355-82a9-db9ce9517e1d
+<https://github.com/user-attachments/assets/60f147d6-ef7a-4355-82a9-db9ce9517e1d>
 
 Se veía reflejado en el  feed de Adafruit IO
 
@@ -38,7 +38,7 @@ Se veía reflejado en el  feed de Adafruit IO
 
 También en el mismo dashboard de ON y OFF encontramos otros blocks de adafruit que permite mandar mensajes que luego aparecen en el arduino ide y en el feed de Adafruit IO
 
-https://github.com/user-attachments/assets/134a4b66-3015-498e-9406-94555eb84eab
+<https://github.com/user-attachments/assets/134a4b66-3015-498e-9406-94555eb84eab>
 
 Otro de los blocks que encontramos es un slide que al moverlo hacia la izquierda y derecha dan distintos números según la posición en donde lo dejemos y estos números luego se ven reflejados en el gráfico de líneas que hay en el feed de Adafruit IO y también aparecen en el arduino ide.
 
@@ -46,7 +46,7 @@ Otro de los blocks que encontramos es un slide que al moverlo hacia la izquierda
 
 ![dashboards](./imagenes/dashboard.png)
 
-De a poco estamos entendiendo mejor el funcionamiento del arduino y de Adafruit IO y las posibilidades de hacer cosas nuevas, estamos muy motivados y emocionados de realizar las ideas que tenemos en mente. 
+De a poco estamos entendiendo mejor el funcionamiento del arduino y de Adafruit IO y las posibilidades de hacer cosas nuevas, estamos muy motivados y emocionados de realizar las ideas que tenemos en mente.
 
 ## materiales usados en solemne-01
 
@@ -55,7 +55,7 @@ De a poco estamos entendiendo mejor el funcionamiento del arduino y de Adafruit 
 | Arduino UNO R4 Wifi         | $38.990 | x1      | <https://mcielectronics.cl/shop/product/43402/> |
 | Cable C a C                 | $14.990 | x1      | <https://www.falabella.com/falabella-cl/product/149750952/> |
 
-| Componentes Proceso | Precio | Cantidad | Link | 
+| Componentes Proceso | Precio | Cantidad | Link |
 | :------------------ | ------ | -------- | :---- |
 | Protoboard          | $1.500 | x1       | <https://afel.cl/products/mini-protoboard-400-puntos> |
 | Cable Dupont (pack 40 uni.) | $2.900 | x4       | <https://mcielectronics.cl/shop/product/cable-dupont> |
@@ -127,6 +127,7 @@ void handleMessage(AdafruitIO_Data *data) {
 }
 
 ```
+
 ### codigo config.h
 
 ```cpp

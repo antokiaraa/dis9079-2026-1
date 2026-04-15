@@ -37,27 +37,25 @@ Además, se deben incluir las credenciales de la red WiFi:
 #define WIFI_PASS "contraseña_wifi"
 ```
 
-### Librería 
+### Biblioteca
 
-La librería de Adafruit IO permite:
+La biblioteca de Adafruit IO permite:
 
 - Conectar el dispositivo a internet  
 - Enviar datos a la nube (publish)  
 - Recibir datos desde la nube (subscribe)  
 - Mantener comunicación en tiempo real  
 
-Internamente, esta comunicación se basa en protocolos como MQTT, pero la librería simplifica su uso.
+Internamente, esta comunicación se basa en protocolos como MQTT, pero la biblioteca simplifica su uso.
 
-
-
-### Funciones 
+### Funciones
 
 - `io.connect()` → inicia la conexión con Adafruit IO  
 - `io.run()` → mantiene la conexión activa y procesa datos  
 - `io.feed()` → define el canal de comunicación  
 - `feed->save(valor)` → envía datos a la nube  
 
-### Feeds 
+### Feeds
 
 Los feeds son el componente central de Adafruit IO. Funcionan como contenedores donde se almacenan los datos enviados por los dispositivos.
 
@@ -82,8 +80,6 @@ Se debe crear un feed por cada fuente de datos distinta.
 Ejemplo:  
 Un sensor de temperatura y dos sensores de humedad → 3 feeds.
 
-
-
 ### Modos de uso
 
 #### Uso con código (API MQTT / REST)
@@ -97,8 +93,6 @@ Un sensor de temperatura y dos sensores de humedad → 3 feeds.
 - Creación automática de feeds  
 - Configuración desde interfaz gráfica  
 - Orientado a usuarios sin experiencia en programación  
-
-
 
 ### Dashboards
 
@@ -117,7 +111,6 @@ Los dashboards son paneles visuales que permiten:
 
 Los dashboards comienzan vacíos y se configuran manualmente según los feeds creados.
 
-
 ### Envío de datos (Publish)
 
 El envío de datos se realiza mediante un feed, utilizando código en Arduino.
@@ -129,8 +122,6 @@ El sistema:
 - Envía datos periódicamente  
 - Permite visualizar los datos en la nube  
 
-
-
 ### Consideraciones técnicas
 
 - La velocidad del monitor serial debe coincidir con el código (ej: 115200 baud)  
@@ -138,11 +129,9 @@ El sistema:
 - Las credenciales deben almacenarse en archivos como `config.h`  
 - No se deben compartir claves en repositorios públicos  
 
-
 ### Firmware
 
 El firmware es el software interno que permite el funcionamiento del hardware. Actúa como intermediario entre el sistema físico y el software, permitiendo la comunicación con módulos como WiFi o Bluetooth.
-
 
 ### Resumen
 
@@ -150,13 +139,12 @@ Adafruit IO es una herramienta clave para el desarrollo de proyectos IoT, ya que
 
 Su estructura basada en feeds y dashboards facilita tanto la transmisión como la visualización de datos, mientras que su compatibilidad con Arduino y otros dispositivos la convierte en una plataforma accesible para el desarrollo de sistemas interactivos en tiempo real.
 
-
 ## sobre artista, diseñadora o producto que usa electrónica o computación inalámbricas
-
 
 Laurie Anderson es una artista, música y performer estadounidense nacida en 1947, reconocida como una de las figuras más influyentes del arte contemporáneo y la experimentación tecnológica.
 
 Su trabajo combina múltiples disciplinas:
+
 - Música electrónica  
 - Performance  
 - Arte visual  
@@ -165,15 +153,14 @@ Su trabajo combina múltiples disciplinas:
 
 Desde los años 70, ha desarrollado una práctica centrada en la relación entre **lenguaje, tecnología y experiencia humana**.
 
-
 ### Contexto
 
 Se formó en:
+
 - Historia del arte (Barnard College)  
 - Escultura (Columbia University)  
 
 Su formación explica su enfoque interdisciplinario, combinando arte conceptual con tecnología y medios digitales.
-
 
 ### Obra
 
@@ -184,7 +171,9 @@ Uno de sus trabajos más conocidos es:
 Esta obra utiliza loops de voz procesada y electrónica, logrando un impacto tanto en el arte experimental como en la cultura popular.
 
 #### 1. Uso del lenguaje
+
 El lenguaje es un elemento central en su trabajo:
+
 - Narración fragmentada  
 - Uso de la voz como instrumento  
 - Reflexión política y cultural  
@@ -199,12 +188,14 @@ Anderson ha sido pionera en integrar tecnología en el arte:
 - Instrumentos diseñados por ella misma  
 
 Ejemplo:
+
 - Violines electrónicos  
 - Dispositivos con sensores  
 
 #### 3. Interdisciplinariedad
 
 Su trabajo combina:
+
 - Música  
 - Video  
 - Performance en vivo  
@@ -215,6 +206,7 @@ Esto la posiciona como una referente del arte digital contemporáneo.
 #### 4. Relación con lo digital
 
 Explora temas como:
+
 - Inteligencia artificial  
 - Comunicación digital  
 - Interfaces humanas  
@@ -222,31 +214,30 @@ Explora temas como:
 
 Su obra anticipa muchas de las discusiones actuales sobre tecnología.
 
-
 ### Otros trabajos
 
 #### United States I–IV (1983)
+
 Obra multimedia que mezcla narrativa, música y tecnología para reflexionar sobre la cultura estadounidense.
 
-
 #### The End of the Moon
+
 Proyecto desarrollado tras su residencia en la NASA, donde combina ciencia, narrativa y performance.
 
-
 #### Homeland / Happiness
+
 Obras que integran storytelling con crítica social y política.
 
-
 #### Landfall (2019)
+
 Proyecto musical inspirado en el huracán Sandy, centrado en la memoria y el cambio climático.
-
-
 
 ### Relación con tecnología y ciencia
 
 Fue la primera artista en residencia de la NASA, lo que evidencia su conexión con el mundo científico.
 
 Su trabajo demuestra que:
+
 - El arte y la ciencia comparten procesos experimentales  
 - La tecnología puede ser un medio expresivo  
 
@@ -261,10 +252,10 @@ Su obra aborda temas como:
 - Tecnología  
 
 Explora cómo las tecnologías influyen en:
+
 - La percepción  
 - La comunicación  
 - La experiencia humana  
-
 
 ### Relación con la interacción digital
 
@@ -275,7 +266,6 @@ Laurie Anderson es relevante en el contexto de la interacción digital porque:
 - Trabaja con datos y tiempo real  
 - Genera nuevas formas de interacción  
 
-
 ### Impacto en el arte contemporáneo
 
 Su influencia incluye:
@@ -285,6 +275,7 @@ Su influencia incluye:
 - Integración de tecnología en el arte  
 
 Ha inspirado a artistas en:
+
 - Arte digital  
 - Música experimental  
 - Performance  
@@ -295,13 +286,11 @@ Laurie Anderson es una figura clave en la relación entre arte y tecnología. Su
 
 Su enfoque interdisciplinario la convierte en una referente fundamental para comprender el arte digital y la interacción contemporánea.
 
-
 ### Bibliografía
 
-- Anderson, Laurie. *Official Website*. https://laurieanderson.com  
-- Wikipedia. “Laurie Anderson”. https://en.wikipedia.org/wiki/Laurie_Anderson  
-- Smithsonian Magazine. “The Multiple Arts of Laurie Anderson”. https://www.smithsonianmag.com  
-- Harvard Gazette. “The introspective Laurie Anderson”. https://news.harvard.edu  
-- Museum of Modern Art (MoMA). “Laurie Anderson”. https://www.moma.org  
-- MIT Media Lab (referencias generales sobre arte y tecnología). https://www.media.mit.edu  
-
+- Anderson, Laurie. *Official Website*. <https://laurieanderson.com>  
+- Wikipedia. “Laurie Anderson”. <https://en.wikipedia.org/wiki/Laurie_Anderson>  
+- Smithsonian Magazine. “The Multiple Arts of Laurie Anderson”. <https://www.smithsonianmag.com>  
+- Harvard Gazette. “The introspective Laurie Anderson”. <https://news.harvard.edu>  
+- Museum of Modern Art (MoMA). “Laurie Anderson”. <https://www.moma.org>  
+- MIT Media Lab (referencias generales sobre arte y tecnología). <https://www.media.mit.edu>  

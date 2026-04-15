@@ -19,16 +19,17 @@ en conclusion friendshipisfriend nos enseñó que todo esto tambien es una forma
 ![imagenes](./imagenes/completo-amistad-es-amigo.jpeg)
 
 bajoncito para celebrar nuestro logro!1!1!!1
+
 ## materiales usados en solemne-01
 
-- 2 Arduinos
-- Dupont
-- USB c
-- Protoboard
-- Led
-- Cable
-- Pantalla oled
-- Pulsómetro
+* 2 Arduinos
+* Dupont
+* USB c
+* Protoboard
+* Led
+* Cable
+* Pantalla oled
+* Pulsómetro
 
 ## proceso
 
@@ -42,7 +43,7 @@ Después quisimos probar a la distancia con el otro Arduino que estaba en otra c
 
 Ya con estas pruebas decidimos que el proyecto final se iba a concretar en que, desde el Arduino 01 que estaba en casa 01 (Arduino con LED que manda el mensaje amistad es amigo, te extraño amigo), se iba a conectar a un dashboard de computador que estaba en otra casa, 02, y que iba a mostrar el mensaje en un bloque stream y de texto, para luego hacer que nuestro Arduino 02 recibiera este mensaje y lo imprimiera en la pantalla OLED. Este fue el proceso más larguísimo de todos. El primer paso lo intentamos al revés, o sea, el Arduino 02 conectando al dashboard de la casa 01. Intentamos de todo: cambiar feed, abrir el feed porque aparecía ese candado bloqueado, dejar el Arduino quieto por varios minutos para ver si quizás se demoraba por la distancia, pero nada. Lo bueno es que sí buscaba información en Adafruit, pero nunca conectó. Entonces probamos al revés, que es la primera opción que se mencionó: hicimos que el Arduino 01 se conectara a un dashboard a través del feed mensaje2, y logró mostrar el mensaje en el dashboard. Una vez completado eso, conectamos la pantalla OLED. Ambos Arduinos estaban conectados al mismo usuario y key de Adafruit. En tutoriales vimos que sí o sí debía dar el mensaje de recibido. La primera parte de este código era sobre la pantalla OLED, su configuración de tamaño tipográfico, y el código principal para recibir el mensaje era este: Serial.println(io.statusText());. Así, ChatGPT nuevamente nos ayudó con la sintaxis y lo logramos. Fue maravilloso, mejor aprendizaje jjj, muchas gracias Aáron y Mateooo.
 
-https://drive.google.com/drive/folders/1T4yQb4QH4CQgEXnvzLIhV1lHX_TUkoPy?usp=sharing
+<https://drive.google.com/drive/folders/1T4yQb4QH4CQgEXnvzLIhV1lHX_TUkoPy?usp=sharing>
 
 (drive con archivos de proceso)
 
@@ -205,20 +206,20 @@ void loop() {
 
 rellenar en el mismo orden que los integrantes del grupo
 
-[persona-01.md](./persona-01.md) 
+[persona-01.md](./persona-01.md)
 [persona-02.md](./persona-02.md)
 [persona-03.md](./persona-03.md)
 
 ## bibliografía
 
-**Arduino. UNO R4 WiFi Cheat Sheet / User Manual.** https://docs.arduino.cc/tutorials/uno-r4-wifi/cheat-sheet/?utm_source=chatgpt.com   
-**Adafruit. Adafruit IO Basics: Feeds.** https://learn.adafruit.com/adafruit-io-basics-feeds?view=all&utm_source=chatgpt.com   
-**Adafruit GitHub. Adafruit_SSD1306.** https://github.com/adafruit/adafruit_ssd1306?utm_source=chatgpt.com   
-**Adafruit. Animated Flying Toaster OLED Jewelry – Code.** https://learn.adafruit.com/animated-flying-toaster-oled-jewelry/code?utm_source=chatgpt.com     
-**Arduino: Pantalla Oled de 0.96"** Mostrar Datos Analógicos https://www.youtube.com/watch?v=GjI0_4ed4JE   
-**Arduino oled mostrar datos.txt**  https://drive.google.com/file/d/1JUANNHpeVcxEBgpdv9FMDBNIgAdSIzLL/view   
-**Sensor pulso cardiaco y arduino** https://m.youtube.com/watch?v=Pu6Ks_O12S8    
-**Arduino Documentation. Using Variables in Sketches.** https://docs.arduino.cc/learn/programming/variables/?utm_source=chatgpt.com   
-**Microsoft Learn. Declarations and definitions (C++).** https://learn.microsoft.com/en-us/cpp/cpp/declarations-and-definitions-cpp?view=msvc-170&utm_source=chatgpt.com   
-**Variables en Arduino: Qué Son y Cómo Usarlas Correctamente.** youtube.com/watch?v=GajOQXb1lYw&utm_source=chatgpt.com    
-**Arduino Tutorial 4: Understanding Arduino Variables.** https://www.youtube.com/watch?v=nPOKOi1jIK0   
+**Arduino. UNO R4 WiFi Cheat Sheet / User Manual.** <https://docs.arduino.cc/tutorials/uno-r4-wifi/cheat-sheet/?utm_source=chatgpt.com>
+**Adafruit. Adafruit IO Basics: Feeds.** <https://learn.adafruit.com/adafruit-io-basics-feeds?view=all&utm_source=chatgpt.com>
+**Adafruit GitHub. Adafruit_SSD1306.** <https://github.com/adafruit/adafruit_ssd1306?utm_source=chatgpt.com>
+**Adafruit. Animated Flying Toaster OLED Jewelry – Code.** <https://learn.adafruit.com/animated-flying-toaster-oled-jewelry/code?utm_source=chatgpt.com>
+**Arduino: Pantalla Oled de 0.96"** Mostrar Datos Analógicos <https://www.youtube.com/watch?v=GjI0_4ed4JE>
+**Arduino oled mostrar datos.txt**  <https://drive.google.com/file/d/1JUANNHpeVcxEBgpdv9FMDBNIgAdSIzLL/view>
+**Sensor pulso cardiaco y arduino** <https://m.youtube.com/watch?v=Pu6Ks_O12S8>
+**Arduino Documentation. Using Variables in Sketches.** <https://docs.arduino.cc/learn/programming/variables/?utm_source=chatgpt.com>
+**Microsoft Learn. Declarations and definitions (C++).** <https://learn.microsoft.com/en-us/cpp/cpp/declarations-and-definitions-cpp?view=msvc-170&utm_source=chatgpt.com>
+**Variables en Arduino: Qué Son y Cómo Usarlas Correctamente.** youtube.com/watch?v=GajOQXb1lYw&utm_source=chatgpt.com
+**Arduino Tutorial 4: Understanding Arduino Variables.** <https://www.youtube.com/watch?v=nPOKOi1jIK0>

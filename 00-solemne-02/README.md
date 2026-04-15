@@ -26,3 +26,6 @@ el día de la solemne los grupos se presentarán en el siguiente orden:
 - 4 puntos menos por no presentar
 - 2 puntos menos por presentar sin explicación
 - 3 puntos menos por no usar referencias a tutoriales
+- 2 puntos menos por uso de lenguaje violento, como por ejemplo "ejecutar"
+- 2 puntos menos por errores en nombres propios, de personas, de productos, de marcas.
+- 2 puntos menos por errores de tildes

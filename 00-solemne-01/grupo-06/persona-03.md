@@ -42,6 +42,17 @@ Como cuarto y último paso se nos indica escribir en el buscador "Adafruit IO Ar
 
 ![Tercera instalación de biblioteca](./imagenes/tercera-descarga.jpeg)
 
+Ya tenía todo para Adafruit IO instalado, pero seguía sin entender para qué era realmente la plataforma, por lo que me puse a leer y en la misma página nos explican que Adafruit IO es un servicio en la nube para desarrollar proyectos de _Internet of Things_ (IoT) mientras que al mismo tiempo nos ofrece guías para que podamos desarrollar nuestros proyectos. Se nos menciona que Adafruit IO también tiene bibliotecas para lenguajes como Arduino, Python, CircuitPython y otros.
+
+Adafruit IO también nos permite agregar, almacenar y visualizar datos en tiempo real en la nube desde dispositivos IoT conectados e interactuar con los mismos dispositivos desde los ``Dashboards``, los cuales se ven forman a partir de ``Feeds``.
+
+
+### Fuentes Adafruit IO
+
+- MK Electrónica. (16 junio, 2022). Aprende a utilizar la plataforma Adafruit IO para tus dispositivos IoT (parte 1) | MK Electronica. MK Electronica. <https://mkelectronica.com/aprende-a-utilizar-la-plataforma-adafruit-io-para-tus-dispositivos-iot-parte-1/>
+- Adafruit IO. (n.d.). Adafruit IO. <https://io.adafruit.com/welcome>
+- IoT, G. (n.d.). Aprende a utilizar la plataforma Adafruit IO para tus dispositivos IoT (parte 1). Generación IoT. <https://internetdelascosas.xyz/articulo.php?id=175&titulo=Aprende-a-utilizar-la->
+
 ---
 
 ## sobre artista, diseñadora o producto que usa electrónica o computación inalámbricas
@@ -74,7 +85,7 @@ Para usar los guantes crearon el software **Glover**, el cual se utiliza para pr
 
 ---
 
-### Fuentes
+### Fuentes Artista
 
 - MIMU — Music through Movement. (n.d.). <https://mimugloves.com/documentation/mimu-gloves-overview/>
 - Castañeda, S., & Castañeda, S. (28 junio, 2025). Imogen Heap - It sounds alternative. It Sounds Alternative - Nos gusta la música y nos gusta compartirla. <https://itsoundsalternative.com/2025/01/17/imogen-heap/>

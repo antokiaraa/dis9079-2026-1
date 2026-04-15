@@ -13,6 +13,7 @@ Fue desarrollada por la empresa Adafruit, fundada por *Limor Fried*, una ingenie
 ## sobre artista, diseñadora o producto que usa electrónica o computación inalámbricas
 
 ## Neri Oxman
+
 Llegué al trabajo de Neri Oxman mientras revisaba distintos proyectos donde se exploraban nuevas formas de integrar tecnología en el diseño. Entre varias propuestas, su enfoque destacó porque la tecnología no aparece como un elemento añadido, sino completamente integrada en los materiales y en la lógica del objeto.
 
 En ese contexto, su trabajo me llamó la atención porque combina biología, tecnología y diseño computacional de una manera integrada. Neri Oxman es diseñadora e investigadora del MIT Media Lab, y desarrolla el concepto de Material Ecology, donde la forma, el material y el comportamiento se diseñan como un solo sistema.
@@ -23,17 +24,20 @@ Su trabajo se vincula con la computación a través del uso de herramientas digi
 
 - simulación de materiales
 - Intregación de datos y sensores
-- Alggoritmos y diseño paramétrico 
+- Alggoritmos y diseño paramétrico
 
-## Proyectos que me interesaron 
+## Proyectos que me interesaron
+
 ## Silk Pavilion
 
 Estructura desarrollada mediante una combinación de fabricación digital y procesos biológicos. Un brazo robótico construye la base y los gusanos de seda completan la estructura.
+
 -> Me interesa porque mezcla tecnología y naturaleza en un mismo proceso, rompiendo la idea tradicional de fabricación.
 
 ## Wanderers
 
 Serie de dispositivos especulativos diseñados para adaptar el cuerpo humano a otros entornos, como el espacio.
+
 -> Me llama la atención la relación directa entre cuerpo y tecnología, donde el diseño funciona como una extensión del usuario.
 
 ## Aguahoja

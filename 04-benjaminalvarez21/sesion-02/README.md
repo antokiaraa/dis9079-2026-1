@@ -1,28 +1,97 @@
-# sesion-02
+## Integrantes
 
-lunes 16 marzo 2026
+Hola, mi grupo es Anays Cornejo y yo, gracias.
 
-## grupo
+## 1. Instalación de Arduino IDE
 
-hola, mi grupo es anays cornejo y yo, gracias.
+### Pasos
 
-arduino, meterse al link y descargar la versión que pueda y sea correcta (si es mac revisar el chip, si es chip apple descarga el que no es intel)
+- Meterse al link oficial de Arduino
 
-instalar boards manager -> arduino uno r4 boards
-Library Manager (libritos que salen en arduino ide) descargar arduinographics y tambien arduinomqttclient
+- Descargar la versión más reciente
 
-homebrew para instalar abrir el command + espacio, abrir terminal, copiar el link que te sale en homebrew
+### Importante (Mac)
 
-mosquitto, para instalar buscar homebrew mosquitto, copiar el link y copiar en terminal
+- Revisar el chip
 
-mosquitto es un intermediario (broker) de mensajería de código abierto que implementa el protocolo MQTT. sirve para gestionar la comunicación entre dispositivos iot, sensores y aplicaciones, permitiendo enviar y recibir datos de forma eficiente, ligera y en tiempo real, siendo fundamental en domótica, automatización industrial y redes.
+- Si es chip Apple -> descargar el que no es Intel
 
-arduino r4 wifi distintas maneras para mandar info al arduino  como mensajes o como palabras que aparecen en la pantalla led de la placa arduino. Puedes enviar info de un arduino a otro mediante wifi y que estén conectados en la mismo ip
+- Si es Intel -> descargar versión Intel
 
-### fotos de la clase
+## 2. Instalación de bibliotecas de Arduino
 
-![arduinofoto1](./imagenes/Arduinocorazon.jpeg)
+### Boards Manager
 
-![arduinofoto2](./imagenes/Arduinoudp.jpeg)
+- Ir a Boards Manager
 
-![arduinofoto3](./imagenes/Arduinoudp2.jpeg)
+- Instalar Arduino UNO R4 Boards
+
+### Library Manager
+
+- Abrir Library Manager (los libritos que salen en Arduino IDE)
+
+#### Descargar
+
+- ArduinoGraphics (versión más reciente)
+
+- ArduinoMQTTClient (versión más reciente)
+
+## 3. Instalación de Homebrew (en Mac)
+
+### Pasos
+
+- Abrir buscador con Command + Espacio
+
+- Buscar y abrir Terminal
+
+- Ir a la página de Homebrew (link en la carpeta sesion-02 de 00-docentes)
+
+- Copiar el link/comando que aparece
+
+- Pegar en la terminal y ejecutar
+
+## 4. Instalación de Mosquitto
+
+### Pasos
+
+- Buscar: homebrew mosquitto
+
+- Copiar el link/comando
+
+- Pegar en la terminal
+
+### Qué es Mosquitto
+
+Mosquitto es un intermediario (broker) de mensajería de código abierto que implementa el protocolo MQTT.
+
+### Para qué sirve
+
+- Gestionar la comunicación entre dispositivos IoT
+
+- Conectar sensores y aplicaciones
+
+- Enviar y recibir datos de forma eficiente, ligera y en tiempo real
+
+### Dónde se usa
+
+- Domótica (conjunto de tecnologías aplicadas al control y la automatización inteligente de la vivienda)
+
+- Automatización industrial
+  
+- Redes
+
+## 5. Arduino R4 WiFi
+
+### Formas de enviar información
+
+Como mensajes, palabras que aparecen en la pantalla LED de la placa Arduino, etc.
+
+### Comunicación entre dispositivos
+
+- Puedes enviar info de un Arduino a otro mediante WiFi
+
+#### Requisitos
+
+- Estar conectados a la misma red
+
+- Estar en la misma IP

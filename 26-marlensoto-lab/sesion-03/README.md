@@ -2,19 +2,45 @@
 
 lunes 23 marzo 2026
 
-    Solemne 1 : Usando dos microcontroladores Arduino uno R4 y Raspyberry pico 2 W 
-Lograr enviar codigo con arduino y recibir con Raspyberry 
+ ## Solemne 1
 
-Arduino:Puma 
-Raspyberry:Hace computadores 
+En esta actividad se trabajará con dos microcontroladores:
 
-Depende de lo que queramos lograr puede que no 
-sea necesario ocupar el computador como tal en una presentacion.
+- Arduino UNO R4  
+- Raspberry Pi Pico 2 W  
 
-    Otros microcontroladores 
-*Dasy
+### Objetivo
 
-Tarea ver monty python unos minutos 
-Diagrama de flujo:https://mermaid.js.org/
+- Enviar datos desde Arduino  
+- Recibir datos en Raspberry Pi Pico  
 
-Leer los pdf que subieron para tener conocimiento de lo realizado para la solemne 
+---
+
+## Conceptos clave
+
+- **Arduino:** orientado principalmente a controlar dispositivos físicos (sensores, actuadores, etc.)  
+- **Raspberry Pi Pico:** permite realizar procesamiento y ejecución de tareas más complejas  
+
+📌 Dependiendo del objetivo del proyecto, **no siempre será necesario utilizar un computador** durante la presentación.
+
+---
+
+## Otros microcontroladores
+
+- Daisy (Dasy)
+
+---
+
+## Actividades complementarias
+
+- Ver fragmentos de *Monty Python* (referencia audiovisual)  
+- Crear diagramas de flujo utilizando:  
+  👉 https://mermaid.js.org/  
+
+- Leer los PDF proporcionados para comprender mejor el desarrollo de la solemne  
+
+---
+
+## Enfoque
+
+El objetivo principal es comprender el **flujo de comunicación entre dispositivos**, más que lograr un sistema completamente funcional.

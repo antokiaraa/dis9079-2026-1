@@ -42,7 +42,6 @@ investigaciones individuales
 
 - Probé el código y compiló, no me apareció el error de conectando a Adafruit IOFirmware version 0.3.0 is outdated. Latest version is 0.5.2 21:24:06.104 -> Please upgrade the WiFiS3 firmware, CORREGIR QUE SÍ ME APARECIÓ ESTE ERROR PERO LO SOLUCIONAMOS CON AARÓN LA MAÑANA DEL 6 DE ABRIL
 
-
 **investigación individual 6 de abril 11 am**
 
 - Adafruit IO es un servicio en la nube, lo que significa que ellos lo gestionan por ti. puede ser utilizado estando conectado a Internet y usado principalmente para guardar y recuperar datos, pero también permite otras cosas
@@ -85,7 +84,7 @@ Código con adafruit IO
 
  *SENTIMOS LOS ESCALOFRÍOS*
 
- - Luego aarón me dijo que abriera la página de adafruit io, nos fuimos a la parte de io, luego feeds y se había creado solo un feed llamado "grupo08", esto es porque en una parte del código asignamos ese nombre al grupo, por lo que, adafruit io lo detecta y lo crea solo
+- Luego aarón me dijo que abriera la página de adafruit io, nos fuimos a la parte de io, luego feeds y se había creado solo un feed llamado "grupo08", esto es porque en una parte del código asignamos ese nombre al grupo, por lo que, adafruit io lo detecta y lo crea solo
 
 ![adafruit](./imagenes/servidorAdafruitbraulio2.JPG)
 
@@ -118,7 +117,7 @@ Código con adafruit IO
 - Al final el archivo config.h sí estaba en la librería de adafruit en github, tenía unos ajustes pequeños entonces se descargó ese para ponerlo en la carpeta del archivo recibir
 
 - Comunicar entre arduinos, uno envía, el otro recibe, el mensaje se traduce y se transforma en algo, cómo???
-   
+
 ## sobre artista, diseñadora o producto que usa electrónica o computación inalámbricas
 
 **DonkeyCar**
@@ -159,13 +158,13 @@ fuente: [docs.donkeycar](https://docs.donkeycar.com/)
 
 - Donkeycar está diseñado como el “Hola Mundo” de la conducción autónoma; es simple, pero a la vez flexible y potente. No se requiere ningún conocimiento previo específico, aunque ayuda tener nociones de:
 
--  Python: No necesitas programar para usar Donkeycar. El archivo que editas para configurar tu auto, myconfig.py, es un archivo de Python. En la mayoría de los casos, solo tienes que descomentar las secciones que quieres modificar y editarlas. Puedes evitar errores comunes si entiendes cómo funcionan los comentarios y la indentación en Python
+- Python: No necesitas programar para usar Donkeycar. El archivo que editas para configurar tu auto, myconfig.py, es un archivo de Python. En la mayoría de los casos, solo tienes que descomentar las secciones que quieres modificar y editarlas. Puedes evitar errores comunes si entiendes cómo funcionan los comentarios y la indentación en Python
 
--  Raspberry PI: La Raspberry Pi es el computador principal recomendado para un Donkeycar. Es útil haberla configurado y utilizado antes, pero no es obligatorio. La documentación de Donkeycar explica cómo instalar el software en Raspberry Pi OS, pero los detalles específicos —como instalar el sistema usando Raspberry Pi Imager o configurar la Raspberry Pi con raspi-config— se dejan a la documentación oficial de Raspberry Pi, que es bastante completa y de buena calidad
+- Raspberry PI: La Raspberry Pi es el computador principal recomendado para un Donkeycar. Es útil haberla configurado y utilizado antes, pero no es obligatorio. La documentación de Donkeycar explica cómo instalar el software en Raspberry Pi OS, pero los detalles específicos —como instalar el sistema usando Raspberry Pi Imager o configurar la Raspberry Pi con raspi-config— se dejan a la documentación oficial de Raspberry Pi, que es bastante completa y de buena calidad
 
 Se recomienda configurar tu Raspberry Pi usando esa documentación y luego experimentar un poco con ella
 
-**Hardware**
+### Hardware
 
 - Lo primero es elegir un auto para poder desarrollar nuestro donkeycar, hay distintos modelos que nos recomiendan en la página. Está la opción de comprar uno que ya esté montado o montar uno nosotros mismos
 
@@ -194,6 +193,7 @@ fuente: [digipart](https://www.digipart.com/part/PCA9685PW118?kw=PCA9685PW118&ut
 - Después de tener esto listo, debemos montar sobre la carcasa del auto, nos dan la opción de agregar una cámara, la Raspberry PI debe quedar conectada cerca del controlador de servos
 
 **Software**
+
 - Debemos seguir una serie de pasos, lo primero es setear nuestra configuración según nuestro sistema operativo, en mi caso sería Windows
 
 ![software](./imagenes/softwareInstalacion.JPG)

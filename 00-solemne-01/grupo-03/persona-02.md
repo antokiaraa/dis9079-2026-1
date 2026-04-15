@@ -288,7 +288,13 @@ void publicarImagen(const char* img) {
 
 **Mónica Rikić** nació en Barcelona en 1986. Estudió Bellas Artes en la Universidad de Barcelona, luego hizo un máster en artes digitales en la Universidad Pompeu Fabra, además de cursar una asignatura en Atenas en donde hizo su primer trabajo de net.art (uso de recursos de la red para producir una obra, la cual puede ser interactiva). Su trayectoria se caracteriza por un enfoque "hecho a mano" de la tecnología, alejándose de lo industrial para centrarse en lo artístico y lo social, inclusive cuestionando filosóficamente la electrónica, haciéndolo capaz de incomodar.
 
-Comenzó con proyectos que unen la musica, codigo y jeugo, uno de ellos es conocido como Buildasound el cual es un juego de bloque de espumas el cual permitia que los niños pudieran crear composiciones musicales de forma tactil, ya con el tiempo decidió ir evolucionando sus obras, creando asi robots con problemas filosoficos los cuales hacian cuestionar a la etica de la robotica y como la vemos, ella no busca la funcionalidad o la productividad de la obra, por lo que en cambio, desea que actuen como un dispositivo critico el cual busque pensamientos y debates colectivos a las personas que lo observen.
+Comenzó con proyectos que unen la música, código y juego, uno de ellos es conocido como Buildasound el cual es un juego de bloque de espumas el cual permitía que los niños pudieran crear composiciones musicales de forma táctil, ya con el tiempo decidió ir evolucionando sus obras, creando asi robots con problemas filosóficos los cuales hacian cuestionar a la ética de la robótica y como la vemos, ella no busca la funcionalidad o la productividad de la obra, por lo que en cambio, desea que actúen como un dispositivo crítico el cual busque pensamientos y debates colectivos a las personas que lo observen.
+
+Su obra más reciente se llama Psychoflage, la cual se está exhibiendo en el Museo Morera (Lleida). Consiste en una fantasía multicolor y psicodélica que utiliza módulos de aire electrónicos que se inflan y desinflan. Todo esto fue realizado con un Arduino UNO R4, junto a un sistema de IA que detecta la presencia de personas en la sala y modifica el flujo de aire en función de ello.
+
+El proyecto también contó con la colaboración de Andre Carandini, directora de arte e ilustradora especializada en moda, quien estuvo a cargo del patrón visual presente en los módulos. Además, incluye música creada por Rodolfo Venegas, productor, compositor y diseñador de sonido proveniente de Colombia.
+
+![Obra Artista1](./imagenes/trabajomonika.jpg)
 
 Mónica ha participado en diferentes festivales e instituciones de arte:
 
@@ -309,11 +315,22 @@ También ha sido nominada a muchos premios como el Japan Media Arts Festival, el
 
 Mi obra favorita de Mónica Rikić fue 1 especie, 2 y 3, la cual se basa en un conjunto de dispositivos robóticos, construidos a partir de estructuras algorítmicas inspiradas en principios filosóficos, que representan un pequeño ecosistema inorgánico.
 
-Me gusta mucho esta obra por como representa este sistema inorgánico pero a la vez se siente demasiado vivo, las 3 especies a pesar de ser tan diferentes entre si, todas siguen el mismo significado de intentar existir en este mundo, es hasta aterrador a mi parecer como estas maquinas se mueven simulando “vida” y como si estuvieran atrapadas en esa pared intentando ser algo mas pero simplenete no pueden por sus limitaciones impuestas por la artista, también me encanta mucho como logra crear estos movimientos organicos con la electronica, me parece que llego a un realismo casi de miedo.
+Me gusta mucho esta obra por como representa este sistema inorgánico pero a la vez se siente demasiado vivo, las 3 especies a pesar de ser tan diferentes entre si, todas siguen el mismo significado de intentar existir en este mundo, es hasta aterrador a mi parecer como estas maquinas se mueven simulando “vida” y como si estuvieran atrapadas en esa pared intentando ser algo mas pero simplemente no pueden por sus limitaciones impuestas por la artista, también me encanta mucho como logra crear estos movimientos orgánicos con la electronica, me parece que llego a un realismo casi de miedo.
 
-![Obra Artista](./imagenes/proceso14.png)
+![Obra Artista2](./imagenes/proceso14.png)
 
 ### bibliografia
 
 * Rikić, M. (s. f.). About – Mónica Rikić. Recuperado el 9 de abril de 2026, de <https://monicarikic.com/about/>
+* Rikić, M. (s. f.). Projects – Mónica Rikić. Recuperado el 9 de abril de 2026, de https://monicarikic.com/projects/
 * Wikipedia. (s. f.). Mónica Rikić. Recuperado el 9 de abril de 2026, de <https://es.wikipedia.org/wiki/Mónica_Rikić>
+
+### nominaciones o sitios donde participó
+
+* Ars Electronica. (s. f.). Mónica Rikić – Artist Profile. Recuperado el 9 de abril de 2026, de https://ars.electronica.art/
+* Sónar Festival. (s. f.). Mónica Rikić. Recuperado el 9 de abril de 2026, de https://sonar.es/
+* A MAZE. Festival. (s. f.). Nominees & Artists. Recuperado el 9 de abril de 2026, de https://amaze-berlin.de/
+* Japan Media Arts Festival. (s. f.). Archive. Recuperado el 9 de abril de 2026, de https://j-mediaarts.jp/en/
+* Laboral Centro de Arte. (s. f.). Artistas – Mónica Rikić. Recuperado el 9 de abril de 2026, de https://laboralcentrodearte.org/
+
+

@@ -14,9 +14,9 @@ La idea principal de nuestro proyecto es poder enviar información desde una pla
 
 En este caso, los componentes que utilizamos son:
 
-+ LED
-+ Resistencia de 220 Ω
-+ Cables Dupont para formar la conexión entre las placas y componentes
+* LED
+* Resistencia de 220 Ω
+* Cables Dupont para formar la conexión entre las placas y componentes
   
 ---
 
@@ -24,9 +24,9 @@ En este caso, los componentes que utilizamos son:
 
 Primero iniciamos probando el conectar el Arduino UNO R4 WiFi a un potenciómetro y que éste mande información a Adafruit, por lo que conectamos la placa Arduino al potenciómetro mediante cables Dupont, teniendo las siguientes conexiones:
 
-+ GND - Pata izquierda del potenciómetro (conexión hecha con cable de color negro)
-+ A0 - Pata del medio del potenciómetro (conexión hecha con cable de color morado)
-+ 5V - Para derecha del potenciómetro (conexión hecha con cable de color roja)
+* GND - Pata izquierda del potenciómetro (conexión hecha con cable de color negro)
+* A0 - Pata del medio del potenciómetro (conexión hecha con cable de color morado)
+* 5V - Para derecha del potenciómetro (conexión hecha con cable de color roja)
 
 Luego de conectar el potenciómetro al Arduino, así se veía nuestra protoboard:
 
@@ -87,14 +87,13 @@ Como no logramos solucionar el error del puerto, fuimos al LID a ver si alguien 
 
 Luego conversar por un rato, llegamos a la conclusión de que en vez de usar un Raspberry Pi Pico 2 W podíamos usar otra Arduino UNO R4 WiFi, lo cual no sabíamos que era una opción pero nos alivió mucho ya que usar la Raspberry era un poco complicado tanto en Arduino IDE como en Visual Studio Code.
 
-
 ## Sistema Recibir - Proyecto Final
 
 Para probar si respondía el Adafruit IO al LED con el código, unimos un LED junto a una resistencia de 220 Ω a la placa Arduino mediante cables Dupont, lo cual terminó viendose así:
 
 ![Circuito con LED en Arduino](./imagenes/pruebaledsinpotenciometro.jpeg)
 
-Luego de tener listo el circuito, añadimos un Feed llamado ``brillo-led`` el cual era para poder manejar la luz del LED mediante Adafruit IO. Dentro del Dashboard se creó un block de ``Togle`` al cual se le asignó el feed de ``brillo-led``, el cual se esperaba que pudiera apagar y encender la luz del LED que estaba conectado a la placa. Al correr el código pasó ésto: 
+Luego de tener listo el circuito, añadimos un Feed llamado ``brillo-led`` el cual era para poder manejar la luz del LED mediante Adafruit IO. Dentro del Dashboard se creó un block de ``Togle`` al cual se le asignó el feed de ``brillo-led``, el cual se esperaba que pudiera apagar y encender la luz del LED que estaba conectado a la placa. Al correr el código pasó ésto:
 
 ![On/Off sin responder](./imagenes/pruebalederror.gif)
 
@@ -108,7 +107,7 @@ Nos tiraba error ya que el "led" no estaba declarado, por lo que corregimos eso 
 
 Al correr nuevamente el código no salió ningún error pero solo salía que estaba conectando a Adafruit y aparecían muchos puntitos, por lo que nunca logró conectarse en realidad.
 
-Cuando logramos volver a conectarnos a Adafruit IO luego de reiniciar la placa, corrimos nuevamente el código y no reaccionó el LED de la protoboard sino el LED de la placa Arduino, lo cual fue sorprendente y nos servía para la entrega pero no era lo que buscábamos, por lo que decidimos seguir intentando lograr nuestra idea principal. 
+Cuando logramos volver a conectarnos a Adafruit IO luego de reiniciar la placa, corrimos nuevamente el código y no reaccionó el LED de la protoboard sino el LED de la placa Arduino, lo cual fue sorprendente y nos servía para la entrega pero no era lo que buscábamos, por lo que decidimos seguir intentando lograr nuestra idea principal.
 
 Como no entendíamos cual era el problema, decidimos preguntar a la IA (ChatGPT) cuál podía ser el posible error, el cual nos dijo que no debíamos conectar el LED directamente a los 5V ya que esto no nos iba a permitir apagar el LED porque le estabamos dando poder de manera constante, por lo que le hicimos caso y cambiamos el cable Dupont al Pin 8 de la placa, y se veía así:
 
@@ -121,7 +120,6 @@ Se hizo cambio de cable, de 5V a Pin 8, y funcionó, al estar en 5V haciá que e
 Cuando probamos otro código, la placa se conectó a Adafruit IO y empezó a recibir la información de encendido y apagado los cuales se representaban como "1" el cual era encendido, y con "0" el cual era apagado.
 
 ![Arduino recibiendo información 0-1 de Adafruit IO](./imagenes/arduino-recibiendo-info.jpeg)
-
 
 ![Conexión lograda luz led en protoboard](./imagenes/luzprotoboard-final.gif)
 
@@ -137,28 +135,29 @@ BOM del primer intento:
 
 | Componente | Cantidad | Valor Unidad | Link |
 | --- | --- | --- | --- |
-| Protoboard 400 puntos | 2 | $2.100 | <https://prodelab.cl/productos/didacticos/nivel-superior-y-ensenanza-media/robotica-y-programacion/accesorios-robotica-y-programacion/protoboard-breadboard-400-pines/?utm_source=Google%20Shopping&utm_campaign=Google%20Shopping&utm_medium=cpc&utm_term=adtribes&srsltid=AfmBOooQXrc0i240CS5O9AUC5AUSqcPz3Hrk2lJyRK-PgMDmejZeipjTcFg>
+| Protoboard 400 puntos | 2 | $2.100 | <https://prodelab.cl/productos/didacticos/nivel-superior-y-ensenanza-media/robotica-y-programacion/accesorios-robotica-y-programacion/protoboard-breadboard-400-pines/>
 | Potenciómetro Lineal B100k | 1 | $495 | <https://altronics.cl/potenciometro-lineal-100k-b100k> |
-| Diodo LED | 1 | $70 | <https://afel.cl/products/diodo-led-5mm-ultrabrillante-rojo?srsltid=AfmBOoqRs9WauSkvkWECyOR_iyVpwsim5QBZGM6EE1L0-aXGRZKD_1eJ> |
+| Diodo LED | 1 | $70 | <https://afel.cl/products/diodo-led-5mm-ultrabrillante-rojo> |
 | Resistencia 220 | 1 | $413 | <https://altronics.cl/pack-10-resistencias-220ohm-025watt-1porciento> |
-| Cables Dupont (Pack 40 uni.) | 1 | $2.590 | <https://mcielectronics.cl/shop/product/cable-dupont-macho-macho-20cm-pack-40-unidades/?srsltid=AfmBOooI8-36HQsjC83sDGqLy-uZ_ht-tuw0nwyKZnloJfamdRdmCWYI> |
-| Arduino UNO R4 WiFi | 1 | $38.990 | <https://arduino.cl/producto/arduino-uno-r4-wifi/?srsltid=AfmBOopJcCsivMRX00i4ZKVCJATlhSM2Bc6SCRhEdXzw6r1x08Ui9740> |
+| Cables Dupont (Pack 40 uni.) | 1 | $2.590 | <https://mcielectronics.cl/shop/product/cable-dupont-macho-macho-20cm-pack-40-unidades/> |
+| Arduino UNO R4 WiFi | 1 | $38.990 | <https://arduino.cl/producto/arduino-uno-r4-wifi/s> |
 | Raspberry Pi Pico 2 W | 1 | $14.990 | <https://raspberrypi.cl/products/raspberry-pi-pico-2-w-con-headers> |
 
 BOM Final
 
 | Componente | Cantidad | Valor Unidad | Link |
 | --- | --- | --- | --- |
-| Diodo LED | 1 | $70 | <https://afel.cl/products/diodo-led-5mm-ultrabrillante-rojo?srsltid=AfmBOoqRs9WauSkvkWECyOR_iyVpwsim5QBZGM6EE1L0-aXGRZKD_1eJ> |
+| Diodo LED | 1 | $70 | <https://afel.cl/products/diodo-led-5mm-ultrabrillante-rojo> |
 | Resistencia 220 | 1 | $413 | <https://altronics.cl/pack-10-resistencias-220ohm-025watt-1porciento> |
-| Cables Dupont (Pack 40 uni.) | 1 | $2.590 | <https://mcielectronics.cl/shop/product/cable-dupont-macho-macho-20cm-pack-40-unidades/?srsltid=AfmBOooI8-36HQsjC83sDGqLy-uZ_ht-tuw0nwyKZnloJfamdRdmCWYI> |
-| Arduino UNO R4 WiFi | 2 | $38.990 | <https://arduino.cl/producto/arduino-uno-r4-wifi/?srsltid=AfmBOopJcCsivMRX00i4ZKVCJATlhSM2Bc6SCRhEdXzw6r1x08Ui9740> |
+| Cables Dupont (Pack 40 uni.) | 1 | $2.590 | <https://mcielectronics.cl/shop/product/cable-dupont-macho-macho-20cm-pack-40-unidades/> |
+| Arduino UNO R4 WiFi | 2 | $38.990 | <https://arduino.cl/producto/arduino-uno-r4-wifi/> |
 
 ## Código usado con Adafruit IO
 
 Este código es el principal, y nos sirve para poder encender y apagar un LED que está conectado al Arduino que recibe información.
 
 ### Código para enviar
+
 ```cpp
 #include <WiFiS3.h>
 #include "AdafruitIO_WiFi.h"
@@ -387,5 +386,5 @@ void loop() {
 
 Lista de enlaces, libros, clases, tutoriales, etc
 
-+ <https://io.adafruit.com/nicolasvgreve/overview>, en donde explica cómo utilizar Arduino IDE en la sección inferior llamada ``Quick Guides``.
-+ <https://mkelectronica.com/aprende-a-utilizar-la-plataforma-adafruit-io-para-tus-dispositivos-iot-parte-1/>, en donde se explica cómo funciona la plataforma de Adafruit IO incluyendo imagenes para que sea más fácil de entender.
+* <https://io.adafruit.com/nicolasvgreve/overview>, en donde explica cómo utilizar Arduino IDE en la sección inferior llamada ``Quick Guides``.
+* <https://mkelectronica.com/aprende-a-utilizar-la-plataforma-adafruit-io-para-tus-dispositivos-iot-parte-1/>, en donde se explica cómo funciona la plataforma de Adafruit IO incluyendo imagenes para que sea más fácil de entender.

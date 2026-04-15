@@ -8,7 +8,7 @@
 
 ## descripción del proyecto
 
-Nuestro proyecto se basa en el desarrollo de un sistema de interacción inalámbrica entre un microcontrolador Arduino y la plataforma en la nube/web Adafruit IO, con el objetivo de controlar dispositivos de manera remota a través de la misma conexión (internet). 
+Nuestro proyecto se basa en el desarrollo de un sistema de interacción inalámbrica entre un microcontrolador Arduino y la plataforma en la nube/web Adafruit IO, con el objetivo de controlar dispositivos de manera remota a través de la misma conexión (internet).
 
 Por un lado, el Arduino es capaz de almacenar datos, en este caso si el botón está encendido o apagado, y enviarlos en tiempo real hacia Adafruit IO utilizando conexión a internet. Estos datos son almacenados y controlados en un dashboards personalizado dentro de la plataforma Adafruit. El proyecto permite el control remoto del Arduino desde Adafruit IO, a través de elementos interactivos como el botón de on/off dentro del dashboard que Arduino recibe; activando y desactivando la pantalla Oled, donde esta muestra un pictograma de gatito saludando, y cuando aprietes el off, el gatito desaparece.
 
@@ -24,7 +24,7 @@ Por un lado, el Arduino es capaz de almacenar datos, en este caso si el botón e
 ## código usado con Adafruit IO
 
 > En este código lo que hicimos fue incluir la pantalla OLED SS1306 con una animación/pictograma sacado de [WOKWI](https://animator.wokwi.com/)
-> Donde definimos el tamaño de la pantalla y una variable en el feed de Adafruit. En este caso, utilizamos un botón en los dashboards de Adafruit para prender y apagar la pantalla Oled desde otro computador; y que en esta salga la animación dependiendo de si está prendida. 
+> Donde definimos el tamaño de la pantalla y una variable en el feed de Adafruit. En este caso, utilizamos un botón en los dashboards de Adafruit para prender y apagar la pantalla Oled desde otro computador; y que en esta salga la animación dependiendo de si está prendida.
 
 ```cpp
 // Adafruit IO Publish Example
@@ -211,7 +211,7 @@ void loop()
 
 ### código para enviar
 
-- El código que envia es el que nos mostró Aarón en clases donde modificamos este código para que este lea el valor de encendido o apagado según el botón de Adafruit y así poder prender la pantalla.
+* El código que envia es el que nos mostró Aarón en clases donde modificamos este código para que este lea el valor de encendido o apagado según el botón de Adafruit y así poder prender la pantalla.
 
 ```cpp
 // Adafruit IO Publish Example
@@ -369,16 +369,16 @@ void loop()
 
 ### código para recibir
 
-- Lo que recibe en este caso sería la pantalla Oled SS1306, en el cual se prende y apaga según el botón en el dashboard en Adafruit. La pantalla muestra un pictograma sacado de wokwi de un gatito saludando
+* Lo que recibe en este caso sería la pantalla Oled SS1306, en el cual se prende y apaga según el botón en el dashboard en Adafruit. La pantalla muestra un pictograma sacado de wokwi de un gatito saludando
 
 Lo primero que hicimos fue conectar la pantalla Oled SS1306 al Arduino y subir algún código para ver si funcionaba de mandera correcta.
 
 `Conexiones:`
 
-- GND pantalla > GND arduino
-- VCC pantalla > 5V arduino
-- SCL > A5
-- SDA > A4
+* GND pantalla > GND arduino
+* VCC pantalla > 5V arduino
+* SCL > A5
+* SDA > A4
 
 Segundo, fue empezar a modificar el código que nos mandó Aarón para que se encendiera la pantalla y mostrará la animación según el botón on/off
 
@@ -402,7 +402,7 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RST_PIN);
 bool oledEncendida = false;
 ```
 
-2. Agregamos esta función que recibe el botón en Adafruit para que pueda prender y apagar la pantalla
+1. Agregamos esta función que recibe el botón en Adafruit para que pueda prender y apagar la pantalla
 
 ```cpp
 
@@ -424,7 +424,7 @@ void handleMessage(AdafruitIO_Data *data) {
 int frame = 0;
 ```
 
-3. Luego, en el setup lo que hicimos fue iniciar la pantalla Oled y agregamos un mensaje si es que no conecta la pantalla
+1. Luego, en el setup lo que hicimos fue iniciar la pantalla Oled y agregamos un mensaje si es que no conecta la pantalla
 
 ```cpp
 if(!display.begin(SSD1306_SWITCHCAPVCC, SCREEN_I2C_ADDR)) {
@@ -436,7 +436,7 @@ if(!display.begin(SSD1306_SWITCHCAPVCC, SCREEN_I2C_ADDR)) {
   display.display();
 ```
 
-4. En el loop, imprimimos el estado de la Oled, que indica en el monitor serial si está prendida o apagada. Además agregamos un temporizador para ver cada cuanto cambia el frame.
+1. En el loop, imprimimos el estado de la Oled, que indica en el monitor serial si está prendida o apagada. Además agregamos un temporizador para ver cada cuanto cambia el frame.
 
 ```cpp
  Serial.print("Estado OLED: ");
@@ -487,14 +487,14 @@ Aprendimos como grupo a ser constantes y no rendirnos hasta lograr el objetivo d
 
 [sofiacartes.md](./persona-01.md)
 
-[persona-02.md](./persona-02.md)
+[Monserrat-Paredes.md](./persona-02.md)
 
 [vxlentiinaa.md](./persona-03.md)
 
 ## bibliografía
 
-- Github Adafruit IO <https://github.com/adafruit/Adafruit_IO_Arduino>
-- Arduino libraries Adafruit IO <https://docs.arduino.cc/libraries/adafruit-io-arduino/>
-- Adafruit IO <https://learn.adafruit.com/adafruit-io/arduino>
-- Adafruit IO overview <https://io.adafruit.com/vxlentiinaa/overview>
-- Wokwi Pantalla OLED animator <https://animator.wokwi.com/>
+* Github Adafruit IO <https://github.com/adafruit/Adafruit_IO_Arduino>
+* Arduino libraries Adafruit IO <https://docs.arduino.cc/libraries/adafruit-io-arduino/>
+* Adafruit IO <https://learn.adafruit.com/adafruit-io/arduino>
+* Adafruit IO overview <https://io.adafruit.com/vxlentiinaa/overview>
+* Wokwi Pantalla OLED animator <https://animator.wokwi.com/>

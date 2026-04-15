@@ -6,76 +6,79 @@
 
 ## 04.04.26
 
-* Lo primero que hice fue instalar biblioteca de Adafruit IO para Arduino y crear mi cuenta en adafruit IO luego puse los códigos de enviarArduino, los leí para entenderlos y saber que debía modificar, puse mis datos en config.h y ver si el código se subía bien.
+* Lo primero que hice fue instalar la biblioteca de Adafruit IO para Arduino y crear mi cuenta en Adafruit IO. Luego puse los códigos de enviarArduino, los leí para entenderlos y saber qué debía modificar. Puse mis datos en config.h y verifiqué si el código se subía bien.
 
 ![instalando-biblioteca](./imagenes/instalada.png)
 ![cuenta-adafruitio](./imagenes/io.png)
 
-* Al inicio no podía subir el código al Arduino. Me aparecía un error de que no se encontraba el dispositivo. Revisé varias cosas: el cable USB, la placa seleccionada y el puerto wn tools. Aunque el puerto aparecía, no funcionaba.
+* Al inicio no podía subir el código al Arduino. Me aparecía un error de que no se encontraba el dispositivo. Revisé varias cosas: el cable USB, la placa seleccionada y el puerto en Tools. Aunque el puerto aparecía, no funcionaba.
 
 * Probé cambiar el puerto manualmente, reiniciar el IDE, desconectar y reconectar la placa, y usar el botón RESET.
 
 ![error1](./imagenes/error1.png)
 
-* Finalmente probé con otra placa Arduino y ahí funcionó altiro, concluí que la primera placa estaba fallando, ya que no podía ser el cable ya que lo he usado anteriormente.
+* Finalmente probé con otra placa Arduino y ahí funcionó al tiro. Concluí que la primera placa estaba fallando, ya que no podía ser el cable porque lo he usado anteriormente.
 
-* Después de eso, logré subir el código, pero el monitor serial mandaba un mensaje extraño, lo dejé ahí. 
+* Después de eso, logré subir el código, pero el monitor serial mostraba un mensaje extraño, así que lo dejé ahí.
 
 ![raro](./imagenes/raro.png)
 
-* Revisé el baud rate (115200), lo cambié, volví a subir el codigo y ahora el monitor serial no mostraba nada.
+* Revisé el baud rate (115200), lo cambié, volví a subir el código y ahora el monitor serial no mostraba nada.
 
 ![baud](./imagenes/baud.png)
 
-* Cambié el puerto en mi computador y el monitor empezó a mostrar actividad, pero solo aparecían puntos infinitos. Entendí que eso significaba que el Arduino estaba intentando conectarse a internet pero no lo lograba.
+* Cambié el puerto en mi computador y el monitor empezó a mostrar actividad, pero solo aparecían puntos infinitos. Entendí que eso significaba que el Arduino estaba intentando conectarse a internet, pero no lo lograba.
 
 ![puntos](./imagenes/puntos.png)
 
 * Probé varias soluciones:
 
   * Revisé las credenciales de Adafruit IO (usuario y key)
-  * Incluso generé una nueva key y la cambie
-  * Cambié la red WiFi por una no 5G (creí que podía ser un problema)
+  * Incluso generé una nueva key y la cambié
+  * Cambié la red WiFi por una que no fuera 5G (creí que podía ser un problema)
   * Usé hotspot del celular para descartar problemas de red
 
-* Aun así no funcionaba, como ya que había leído lo que escribió Aarón sobre las updates de la placa, dije, bueno, por qué no actualizarlo ahora?,quizas podia ser un problema de firmware en la placa y si no era, cuando se conectara me podía mandar a ese error igualmente porque no estaba actualizada, así que, por qué no evitar?
+* Aun así no funcionaba. Como ya había leído lo que escribió Aarón sobre las actualizaciones de la placa, pensé: bueno, ¿por qué no actualizarla ahora? Quizás podía ser un problema de firmware y, si no lo era, cuando se conectara podría arrojar ese error igualmente por no estar actualizada. Así que decidí hacerlo.
 
-* Empecé el proceso de actualización del firmware desde Arduino IDE
+* Empecé el proceso de actualización del firmware desde Arduino IDE.
+
 ![update](./imagenes/update.png)
 
-* Como Aarón dijo que esto toma un tiempo, fui a hacerme un pancito, gran error, cuando volvi la pantalla del compu se habia apagado por lo que todo se detuvo y tuve que hacerlo de nuevo, asi que ahora me encuentro escribiendo esto tratando de que no se apague el computador.
-* Ahora que la comece  actualizar me mandaba error, desconecté todo, ocupé RESET y puse actualizar de nuevo, ahora si funcionaba.
+* Como Aarón dijo que esto toma un tiempo, fui a hacerme un pancito. Gran error: cuando volví, la pantalla del computador se había apagado, por lo que todo se detuvo y tuve que hacerlo de nuevo. Así que ahora me encuentro escribiendo esto tratando de que no se apague el computador.
+
+* Ahora que comencé a actualizar, me aparecía un error. Desconecté todo, usé RESET y volví a intentar la actualización. Esta vez sí funcionó.
 
 ![error2](./imagenes/update2.png)
 
-* En paralelo, mientras esperaba, me fui a learn.adafruit y leí sobre los feeds, so avancé creando el feed “grupo05”, asegurándome de que coincidiera exactamente con el nombre en el código.
+* En paralelo, mientras esperaba, me fui a learn.adafruit y leí sobre los feeds, así que avancé creando el feed “grupo05”, asegurándome de que coincidiera exactamente con el nombre en el código.
 
 ![feeds](./imagenes/feeds.png)
 ![feeds](./imagenes/feeds2.png)
 
-La actualización realmente se toma su tiempo, ha pasado una hora desde que empezó.
+La actualización realmente toma su tiempo; ha pasado una hora desde que empezó.
 
 ![largaupdate](./imagenes/update3.png)
 
-Okay, ha pasado un poco más de hora y media y aún no se termina de actualizar, terminaré esta misión mañana.
+Okay, ha pasado un poco más de una hora y media y aún no termina de actualizar. Terminaré esta misión mañana.
 
-Mis placas están en coma, en recuperación con el doctor aarón.
+Mis placas están en coma, en recuperación con el doctor Aarón.
 
-Por mientras subí el código ahora con un arduino mañoso que funciona cuando quiere y no tiene la acrtualización, pero ahora me apareció mas info en el monitor serial.
+Por mientras, subí el código con un Arduino mañoso que funciona cuando quiere y no tiene la actualización, pero ahora apareció más información en el monitor serial.
 
 ![yuju](./imagenes/masquepuntos.png)
 
-Por otro lado, cami pudo enviar desde su compu, así que perfect, ahora queremos modificar el código para que envíe algo más que números. seguimos trabajando.
+Por otro lado, Cami pudo enviar desde su computador, así que perfecto. Ahora queremos modificar el código para que envíe algo más que números. Seguimos trabajando.
 
-Queremos como grupo, enviar un sonido desde un arduino conectado a un potenciómetro, y que este potenciómetro controle el volumen de el sonido que sonará en el otro arduino que recibirá.
-El arduino que recibe tendrá conectado un altavoz, por el que sonará el sonido enviado y en la pantalla de leds se verá una barra de leds que muestre el volumen de manera gráfica.
+Queremos, como grupo, enviar un sonido desde un Arduino conectado a un potenciómetro, y que este potenciómetro controle el volumen del sonido que sonará en el otro Arduino que recibirá.
 
-logramos hacer que el potenciómetro funcionara!
+El Arduino que recibe tendrá conectado un altavoz, por el que sonará el sonido enviado, y en la pantalla de LEDs se verá una barra que muestre el volumen de manera gráfica.
+
+¡Logramos hacer que el potenciómetro funcionara!
 
 ![pot](./imagenes/pot.png)
 ![pot](./imagenes/potfeed.png)
 
-Luego de hacer que el potenciametro funcionara, ocupamos de base el código de adafruitio_01_subscribe.ino ubicado en <https://github.com/adafruit/Adafruit_IO_Arduino/blob/master/examples/adafruitio_01_subscribe/adafruitio_01_subscribe.ino> para hacer el código de recibir.
+Luego de hacer que el potenciómetro funcionara, usamos como base el código de adafruitio_01_subscribe.ino ubicado en <https://github.com/adafruit/Adafruit_IO_Arduino/blob/master/examples/adafruitio_01_subscribe/adafruitio_01_subscribe.ino> para hacer el código de recepción.
 
 ## sobre artista, diseñadora o producto que usa electrónica o computación inalámbricas
 

@@ -2,7 +2,11 @@
 
 lunes 30 marzo 2026
 
-Para el examen ocuparemos Hivemg 
+## Preparación para el examen
+
+Cada estudiante contará con un **ID y una contraseña diferente** para acceder al sistema.
+
+Además, se revisará material teórico complementario sobre conceptos de información, como el trabajo de 
 https://tigervnc.org/  
 Cada id tendra una contraseña diferente 
 https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf
@@ -13,11 +17,36 @@ https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pd
 Protocolo de datagramas de usuario
 https://en.wikipedia.org/wiki/User_Datagram_Protocol 
 
-Red: dis9079 
-Contraseña:75288273
-        
-        Solemne 1 
-Lo mas esencial es Diagramar y esfecificar nosotros mismos de que trata 
+## 🌐 Datos de red
 
-el proximo lunes terminaremos la solemne en clases 
-Tendremos que lograr enviar desde arduino y raspeberry recibir no es necesario que funcione completo pero con tal de hacer el ejercicio esta bien :)
+- **Red:** dis9079  
+- **Contraseña:** 75288273  
+
+---
+
+## Solemne 1
+
+El enfoque principal de la solemne es:
+
+- Diagramar y explicar con nuestras propias palabras el funcionamiento del sistema desarrollado  
+- Comprender claramente el flujo de datos entre dispositivos  
+
+La actividad continuará el próximo lunes en clases, donde se espera completar el trabajo.
+
+---
+
+## Objetivo práctico
+
+Para la evaluación, se deberá:
+
+- Enviar datos desde un dispositivo Arduino  
+- Recibir datos en una Raspberry Pi  
+
+No es necesario que el sistema funcione de manera perfecta; lo importante es realizar el ejercicio y demostrar el intento de implementación.
+
+---
+
+## Observación
+
+El énfasis está en el **proceso de aprendizaje**, la comprensión del sistema y la capacidad de explicar cómo funciona, más que en lograr un resultado completamente funcional.
+

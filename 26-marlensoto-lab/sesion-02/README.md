@@ -1,26 +1,54 @@
 # sesion-02
 
 lunes 16 marzo 2026
-Grupo Solemne 1: Marlen Soto/ Marcela Zuñiga
+## Grupo Solemne 1
 
-Arduino uno R4
+- Marlen Soto  
+- Marcela Zúñiga  
 
-¿Que trabajmos hoy?
+---
 
-Aprendimos a utilizar el arduino
+## Dispositivo utilizado
 
-*Escribimos nuestros nombre y tambien el del ramo
+- Arduino UNO R4  
 
-*figuras formas
+---
 
-*vimos como enviar datos y recibirlos atraves de un compu
+## ¿Qué trabajamos hoy?
 
-Solemne 1
-Lo principal es lograr que entre dos compudores logremos proyectar distintas cosas: luces , figuras....
+Durante la clase realizamos una introducción práctica al uso de Arduino, donde:
 
-Arduino uno R14 trabajamos
-*ejercicios mandando datos
-*escribiendo nombre del curso
-*Recibiendo datos y enviando
+- Aprendimos a utilizar el Arduino y su entorno de programación  
+- Escribimos nuestros nombres y el del ramo como primeros ejercicios  
+- Trabajamos con figuras y formas básicas  
+- Exploramos cómo enviar y recibir datos a través de un computador  
 
-Solemen 1: llegar a poder enviar 2 mensajes entre computadores , creando distintas cosas ejemplo:luces, puntos ....
+---
+
+## Solemne 1
+
+El objetivo principal es lograr que, entre dos computadores, se puedan **proyectar distintas acciones**, como:
+
+- Encendido de luces  
+- Visualización de figuras  
+- Representación de puntos u otros elementos  
+
+---
+
+## Actividades realizadas
+
+- Ejercicios de envío de datos  
+- Escritura del nombre del curso  
+- Pruebas de comunicación (enviar y recibir datos)  
+
+---
+
+## Objetivo final
+
+Para la Solemne 1 se espera:
+
+- Lograr el envío de al menos **dos mensajes entre computadores**  
+- Generar distintas respuestas, como por ejemplo:
+  - Luces  
+  - Figuras  
+  - Puntos  

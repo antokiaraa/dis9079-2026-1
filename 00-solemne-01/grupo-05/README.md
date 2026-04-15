@@ -4,12 +4,11 @@ Lunes 13 Abril 2026
 
 ***
 
-## Integrantes "Sonoridad":
+## Integrantes "Sonoridad"
 
 * [Felipe Caurapan](https://github.com/felipecaurapan):
 * [Camila Parada](https://github.com/Camila-Parada): Código, Bill of Materials, Redacción de texto
 * [Vania Paredes](https://github.com/paredesvania): Código, Circuito, Redacción de texto, Registro
-
 
 ## Descripción del proyecto "Don Volumen"
 

@@ -2,32 +2,29 @@
 
 ## integrantes
 
-* martina alegria
 * antonella lavalle
-* catalina salinas/https://github.com/catasal/dis9079-2026-1
+* catalina salinas <https://github.com/catasal/dis9079-2026-1>
+* martina alegria
 
 ## descripción del proyecto
 
 ## materiales usados en solemne-01
 
-
-
 ## código usado con Adafruit IO
 
-
-
 ### código para enviar
+
 <img width="1900" height="940" alt="Captura de pantalla 2026-04-06 160014" src="https://github.com/user-attachments/assets/a316168d-0b0f-4ed2-9a27-c916991a1805" />
 
 <img width="1920" height="1008" alt="image" src="https://github.com/user-attachments/assets/5ee5e857-3a3e-42a0-8ace-0b8725b25f91" />
 
-
-Nos estuvo saliendo solo puntitos durante toda la clase, tratamos con 3 hotpost diferentes y usuarios de adafruit, creemos que falló por el uso de mayúsculas y minúsculas mal puestas y ademas los nombres de los hotpost, además de que las contraseñas eran solo de 8 caracteres. Pero luego cambiamos la contraseña de internet a una mas larga (mas de 8 caracteres y solo con minusculas y numeros) 
+Nos estuvo saliendo solo puntitos durante toda la clase, tratamos con 3 hotspot diferentes y usuarios de adafruit, creemos que falló por el uso de mayúsculas y minúsculas mal puestas, los nombres de los hotspot, además de que las contraseñas eran solo de 8 caracteres. Pero luego cambiamos la contraseña de internet a una mas larga (mas de 8 caracteres y solo con minúsculas y números)
 con ese cambio resulto al enviar datos.
 
 <img width="1920" height="1008" alt="imagen1" src="https://github.com/user-attachments/assets/634f3f8f-8182-4513-914b-58559216b30c" />
 
 ## config.h
+
 ```cpp
 // rellenar
 // reemplazar por las credenciales de aaron
@@ -60,6 +57,7 @@ AdafruitIO_WiFi io(IO_USERNAME, IO_KEY, WIFI_SSID, WIFI_PASS, SPIWIFI_SS,
 AdafruitIO_WiFi io(IO_USERNAME, IO_KEY, WIFI_SSID, WIFI_PASS);
 #endif
 ```
+
 ### código para recibir
 
 ```cpp
@@ -67,9 +65,12 @@ AdafruitIO_WiFi io(IO_USERNAME, IO_KEY, WIFI_SSID, WIFI_PASS);
 ```
 
 ## investigaciones individuales
+
 * martina alegria-persona 03
+
 * antonella lavalle-persona 01
 * catalina salinas-persona 02
+* martina alegria-persona 03
 
 rellenar en el mismo orden que los integrantes del grupo
 

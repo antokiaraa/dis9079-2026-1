@@ -9,7 +9,7 @@ Durante las primeras pruebas en la sala, el uso de Mosquitto nos dio muchísimos
 
 La Solución: Para solucionar estas fallas, investigamos la opción de Adafruit IO. La gran ventaja es que este broker en la nube permite conexiones vía MQTT sobre WebSockets en el puerto 443. Como este puerto es el mismo que usa el tráfico web normal (HTTPS), logramos saltarnos los bloqueos del firewall y tener una comunicación fluida y estable desde cualquier computador.
 
-## 1. El Corazón del Proyecto: Comunicación Inalámbrica
+## El Corazón del Proyecto: Comunicación Inalámbrica
 Mi semana de Solemne partió literal desde la base. El lunes en la clase me di cuenta de que para que el Arduino haga algo "inalámbrico", primero hay que armarle todo un ecosistema en el computador y en la nube. No es llegar y conectar. 
 
 Una vez superado el problema de la red, mi investigación se volcó a la interacción en tiempo real. Aquí aprendí conceptos que son el motor de nuestro proyecto:
@@ -28,13 +28,13 @@ Aunque yo ya tenía instalado el Arduino IDE de antes, decidí revisar la págin
 
 Paso 1: Lo primero que hice fue crearme la cuenta en Adafruit IO. Al principio no entendía mucho para qué servía, pero después caché que es como el "cerebro" en la nube que va a recibir los datos de mi placa.
 
-<table style="width: 100%; border: none;"> <tr> <td style="width: 50%; border: none; text-align: center;"> <img src="https://github.com/user-attachments/assets/bdb6d761-7fd0-40e8-98f7-01da73422279" width="100%" alt="Tutorial Adafruit IO"> <p><i><b>Imagen 01:</b> Video tutorial que seguí para entender el ecosistema de Adafruit IO.</i></p> </td> <td style="width: 50%; border: none; text-align: center;"> <img src="https://github.com/user-attachments/assets/7952a9eb-b332-48ba-8df7-c20f7744efff" width="100%" alt="Cuenta Creada"> <p><i><b>Imagen 02:</b> Mi cuenta de Adafruit IO ya creada y configurada para recibir datos.</i></p> </td> </tr> </table>
+<table style="width: 100%; border: none;"> <tr> <td style="width: 50%; border: none; text-align: center;"> <img src="https://github.com/user-attachments/assets/bdb6d761-7fd0-40e8-98f7-01da73422279" width="100%" alt="Tutorial Adafruit IO"> <p><i><b>Imagen 02:</b> Video tutorial que seguí para entender el ecosistema de Adafruit IO.</i></p> </td> <td style="width: 50%; border: none; text-align: center;"> <img src="https://github.com/user-attachments/assets/7952a9eb-b332-48ba-8df7-c20f7744efff" width="100%" alt="Cuenta Creada"> <p><i><b>Imagen 03:</b> Mi cuenta de Adafruit IO ya creada y configurada para recibir datos.</i></p> </td> </tr> </table>
 
 * **La famosa AIO Key:** Apenas entré, busqué mi "Key". Es una clave gigante que te dan y aprendí que es súper secreta. El profe nos recalcó mil veces que si la subimos a GitHub, cualquiera puede meterse a nuestro proyecto, así que tuve que tener mucho cuidado de no dejarla pegada en el código principal.
 * **Armando el "buzón" (Feeds):** Creé mi primer Feed. Me costó un poco entender el concepto, pero al final lo vi como un buzón: mi Arduino tira una carta ahí y el Dashboard la lee.
 
 
-<table style="width: 100%; border: none;"> <tr> <td style="width: 50%; border: none; text-align: center;"> <img src="https://github.com/user-attachments/assets/5d380a01-39e2-4220-aaa2-e3dbbaef625e" width="100%" alt="Configuración de Feeds"> <p><i><b>Imagen 03:</b> Este es el "buzón" donde mi Arduino revisa si llegaron mensajes nuevos para mostrar en su pantalla LED.</i></p> </td> <td style="width: 50%; border: none; text-align: center;"> <img src="https://github.com/user-attachments/assets/75d786b1-3ce3-44a0-887a-860d2d3cb948" width="100%" alt="Detalles de la App"> <p><i><b>Imagen 04:</b> Vista de la App donde revisé los tokens y la información técnica de la cuenta.</i></p> </td> </tr> </table>
+<table style="width: 100%; border: none;"> <tr> <td style="width: 50%; border: none; text-align: center;"> <img src="https://github.com/user-attachments/assets/5d380a01-39e2-4220-aaa2-e3dbbaef625e" width="100%" alt="Configuración de Feeds"> <p><i><b>Imagen 04:</b> Este es el "buzón" donde mi Arduino revisa si llegaron mensajes nuevos para mostrar en su pantalla LED.</i></p> </td> <td style="width: 50%; border: none; text-align: center;"> <img src="https://github.com/user-attachments/assets/75d786b1-3ce3-44a0-887a-860d2d3cb948" width="100%" alt="Detalles de la App"> <p><i><b>Imagen 05:</b> Vista de la App donde revisé los tokens y la información técnica de la cuenta.</i></p> </td> </tr> </table>
 
 Paso 2: Después de las cuentas de Adafruit, me pasé al Arduino IDE. Yo ya lo tenía instalado, pero aprendí que para que la placa hable con internet, el programa necesita "superpoderes" extra que vienen en las Librerías.
 
@@ -42,11 +42,11 @@ Paso 2: Después de las cuentas de Adafruit, me pasé al Arduino IDE. Yo ya lo t
 2. Las dependencias: Cuando le di a "Install", me saltó un aviso gigante preguntando si quería instalar un montón de cosas más. Al principio me dio susto, pero entendí que son como los "ayudantes" de la librería principal (como HttpClient y Adafruit_MQTT). Sin ellos, el código simplemente no compila porque le faltarían piezas clave.
 3. Logro: Una vez que terminó la descarga, mi IDE ya estaba listo para escribir código que se conectara a la nube.
 
-<table style="width: 100%; border: none;"> <tr> <td style="width: 50%; border: none; text-align: center;"> <img src="https://github.com/user-attachments/assets/5a4465ad-acee-497f-9a16-1e36107cf345" width="115%" alt="Instalación de Librerías 01"> <p><i><b>Evidencia 05:</b> Buscando la librería <b>Adafruit IO Arduino</b> en el Library Manager.</i></p> </td> <td style="width: 50%; border: none; text-align: center;"> <img src="https://github.com/user-attachments/assets/8a412aa3-3d25-41ac-8fec-88104af41b5c" width="115%" alt="Instalación de Librerías 02"> <p><i><b>Evidencia 06:</b> Proceso de instalación de dependencias. Se instalaron todos los "ayudantes" necesarios para la comunicación WiFi.</i></p> </td> </tr> </table>
+<table style="width: 100%; border: none;"> <tr> <td style="width: 50%; border: none; text-align: center;"> <img src="https://github.com/user-attachments/assets/5a4465ad-acee-497f-9a16-1e36107cf345" width="115%" alt="Instalación de Librerías 01"> <p><i><b>Evidencia 06:</b> Buscando la librería <b>Adafruit IO Arduino</b> en el Library Manager.</i></p> </td> <td style="width: 50%; border: none; text-align: center;"> <img src="https://github.com/user-attachments/assets/8a412aa3-3d25-41ac-8fec-88104af41b5c" width="115%" alt="Instalación de Librerías 02"> <p><i><b>Imagen 07:</b> Proceso de instalación de dependencias. Se instalaron todos los "ayudantes" necesarios para la comunicación WiFi.</i></p> </td> </tr> </table>
 
 Hallazgos Técnicos Clave:
 
-* **Protocolo y Puertos:** A diferencia de Mosquitto local (que nos dio problemas de permisos en el puerto 1883), Adafruit IO permite conexiones vía MQTT sobre WebSockets (puerto 443). Esto es fundamental porque el tráfico se ve como tráfico web normal (HTTPS), saltándose los firewalls de Windows que nos bloquearon en la clase pasada.
+* **Protocolo y Puertos:** A diferencia de Mosquitto local (que nos dio problemas de permisos en el puerto 1883), Adafruit IO permite conexiones vía MQTT sobre WebSockets (puerto 443). Esto es fundamental porque el tráfico se ve como tráfico web normal (HTTPS), saltándose los firewalls de Windows.
 * **Arquitectura de Datos (Feeds):** Entendí que Adafruit IO organiza todo por "Feeds". No es solo enviar un dato al aire; es una base de datos de series temporales. Esto significa que si mi Arduino se desconecta un segundo de la WiFi de la U, Adafruit guarda el último estado (Last Will and Testament), lo que hace que la comunicación sea mucho más robusta que un broker simple.
 * **Seguridad y AIO Key:** Investigué que la AIO Key funciona como un token de autenticación dinámico. A diferencia de un usuario/pass normal, este token permite revocar el acceso sin cambiar la cuenta, lo cual es vital si llegamos a compartir código en GitHub (aunque el profe fue súper enfático en que no las subamos).
 
@@ -66,6 +66,22 @@ El objetivo era conectar el Arduino R4 WiFi a Adafruit IO por primera vez.
 1. Mi experiencia: Al principio fue un enredo con las credenciales. Aprendí que el código es súper sensible: una mayúscula mal puesta en el nombre del WiFi y ya no conectaba.
 2. Lo que descubrí: Aquí fue cuando caché lo de los Puertos COM. Al conectar mi placa, vi que aparecía como COM14. Entendí que ese es el "asiento" que ocupa mi Arduino en el PC. También noté que si el código decía 115200 baudios y el monitor estaba en 9600, solo veía símbolos raros (rombos). Sincronizarlos fue la clave para ver el mensaje de "conectado.
 
+## Ejercicio 1 - Resumen de primer acercamiento y configuración 
+
+Este primer día el foco estuvo en entender cómo el Arduino UNO R4 WiFi se comunica con la nube. El profesor nos entregó un código base configurado para el envío de datos hacia Adafruit IO, lo que me sirvió para familiarizarme con el entorno antes de programar algo propio.
+
+Que aprendí:
+
+1. **Configuración de red:** Al principio tuve problemas para que la placa detectara el WiFi de mi teléfono. Aprendí que en la programación de redes la precisión es absoluta: una mayúscula mal puesta en el SSID impide cualquier conexión.
+2. **Sincronización del Monitor Serial:** Inicialmente solo veía símbolos extraños (rombos) en la pantalla. Esto me permitió entender el concepto de los baudios; si el código define 115200 y el monitor está en 9600, la comunicación se rompe. Al ajustarlos, pude verificar finalmente el estado de la conexión.
+3. **Visualización en la nube:** Fue valioso ver cómo los datos enviados desde el hardware se reflejaban de inmediato en las gráficas de Adafruit. Esta base fue fundamental para los experimentos más complejos que vinieron después.
+
+Evidencia:
+<table style="width: 100%; border: none;"> <tr> <td style="border: none; text-align: center; vertical-align: top; padding: 10px;"> <img src="https://github.com/user-attachments/assets/fcc9395a-1390-4b80-a16e-d9240fd939c1" width="450"> <p><small><i>Imagen 08: Error inicial de conexión por credenciales.</i></small></p> </td> <td style="border: none; text-align: center; vertical-align: top; padding: 10px;"> <img src="https://github.com/user-attachments/assets/552a42f1-3f42-4600-b16d-f840360d1410" width="450"> <p><small><i>Imagen 09: Conexión exitosa y lectura del monitor serial.</i></small></p> </td> </tr> <tr> <td style="border: none; text-align: center; vertical-align: top; padding: 10px;"> <img src="https://github.com/user-attachments/assets/64fedba8-0fdc-4623-9671-2ed1303b7899" width="450"> <p><small><i>Imagen 10: Datos llegando correctamente a Adafruit.</i></small></p> </td> <td style="border: none; text-align: center; vertical-align: top; padding: 10px;"> <img src="https://github.com/user-attachments/assets/bb66dc20-6527-4b01-ac16-ec4bdf3f9a14" width="450"> <p><small><i>Imagen 11: Comprobación final del flujo de datos en la nube.</i></small></p> </td> </tr> </table>
+
+
+
+
 ## Ejercicio 2 Resumen: El Drama del LED y el Dashboard
 
 Aquí la meta era pro pro: prender un LED físico con un botón digital desde Adafruit.
@@ -83,7 +99,7 @@ Durante estos dos ejercicios, me fijé en detalles del Arduino IDE que ahora me 
 
 Evidencia:
 
-<table style="width: 100%; border: none;"> <tr> <td style="border: none; text-align: center; vertical-align: top;"> <img src="https://github.com/user-attachments/assets/3c1dc746-db01-4707-9176-1ccf272acb70" width="400" alt="Circuito LED"> <p><small><i><b>Imagen 07:</b> Setup inicial protoboard.</i></small></p> </td> <td style="border: none; text-align: center; vertical-align: top;"> <img src="https://github.com/user-attachments/assets/5e48be00-1fdf-4d84-93b0-64ed8c9add9f" width="300" alt="Dashboard Adafruit"> <p><small><i><b>Imagen 08:</b> Botón en Adafruit IO.</i></small></p> </td> <td style="border: none; text-align: center; vertical-align: top;"> <img src="https://github.com/user-attachments/assets/97e0f2c7-5540-40fd-9f60-5cc595c7be07" width="400" alt="Uso multímetro"> <p><small><i><b>Imagen 09:</b> Diagnóstico con multímetro.</i></small></p> </td> </tr> </table>
+<table style="width: 100%; border: none;"> <tr> <td style="border: none; text-align: center; vertical-align: top;"> <img src="https://github.com/user-attachments/assets/3c1dc746-db01-4707-9176-1ccf272acb70" width="400" alt="Circuito LED"> <p><small><i><b>Imagen 12:</b> Setup inicial protoboard.</i></small></p> </td> <td style="border: none; text-align: center; vertical-align: top;"> <img src="https://github.com/user-attachments/assets/5e48be00-1fdf-4d84-93b0-64ed8c9add9f" width="300" alt="Dashboard Adafruit"> <p><small><i><b>Imagen 13:</b> Botón en Adafruit IO.</i></small></p> </td> <td style="border: none; text-align: center; vertical-align: top;"> <img src="https://github.com/user-attachments/assets/97e0f2c7-5540-40fd-9f60-5cc595c7be07" width="400" alt="Uso multímetro"> <p><small><i><b>Imagen 14:</b> Diagnóstico con multímetro.</i></small></p> </td> </tr> </table>
 
 ## Experimento Grupal - Resumen: Comunicación entre Nodos (Emisor y Receptor)
 
