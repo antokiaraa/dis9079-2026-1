@@ -58,7 +58,7 @@ TigerVNC -> acceso gráfico
 
 ### MQTT
 
-Protocolo ligero basado en TCP que funciona bajo el modelo *publish/subscribe*.
+Protocolo ligero basado en TCP que funciona bajo el modelo publish/subscribe.
 
 - Usa un broker como por ejemplo Mosquitto en Raspberry Pi
 
