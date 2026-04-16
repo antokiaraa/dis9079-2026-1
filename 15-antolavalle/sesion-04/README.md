@@ -19,7 +19,7 @@ Se utiliza MQTT como protocolo de intercambio de datos. Funciona mediante un sis
 
 Elementos principales
 
-+ Broker (servidor)
++ Broker
 + Puerto 1883
 + Topic compartido
 + Credenciales de acceso
