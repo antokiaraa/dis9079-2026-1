@@ -17,7 +17,7 @@ https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pd
 Protocolo de datagramas de usuario
 https://en.wikipedia.org/wiki/User_Datagram_Protocol 
 
-## 🌐 Datos de red
+## Datos de red
 
 - **Red:** dis9079  
 - **Contraseña:** 75288273  
