@@ -43,7 +43,7 @@ A nivel conceptual, su trabajo aborda temas como la autoría, el control y la co
 
 ![artista](./imagenes/aa_Sougwen_Chung.png)
 
-## Bibliografia:
+## Bibliografía:
 
 * Adafruit Industries. Welcome to Adafruit IO.
 
