@@ -89,7 +89,7 @@ Aquí la meta era pro pro: prender un LED físico con un botón digital desde Ad
 1. El "Fail" del día: ¡Se nos quemó un LED!:( Entre tanto cable y resistencia, pusimos una que no era y el pobre LED no aguantó, se puso como de colocar naranjo y salió humo. 
 2. Aprendizaje técnico: Usamos el multímetro para revisar el voltaje. Aprendí que no se trata de conectar por conectar; hay que entender cuánta energía aguanta cada componente. Aunque el tiempo nos pilló y no alcanzamos a ver el LED prendiendo desde el switch ese mismo lunes, me sirvió para entender la lógica bidireccional: yo aprieto un botón en la web -> viaja a la nube -> el Arduino recibe la orden -> se prende la luz.
 
-Mis Observaciones de Programadora Novata 
+Mis Observaciones:
 
 Durante estos dos ejercicios, me fijé en detalles del Arduino IDE que ahora me hacen la vida más fácil:
 
